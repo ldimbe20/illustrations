@@ -24,11 +24,18 @@ export default function Navbar() {
 
 	return (
 		<>
-			<div className='w-full h-15 py-3 sticky bg-white'>
-				<div className='flex justify-between ml-2 md:mr-2 md:justify-between'>
+			<div className='w-full h-15 py-3 sticky bg-white border-b-2 border-slate-500'>
+				<div className='flex justify-between items-center ml-2 md:mr-2'>
 					{/* regular menu to display on larger screens*/}
-					<div className='hidden  md:flex md:items-center md:mx-0'>
-						<NavLinks handleLinkClick={handleLinkClick} />
+					<div className='hidden md:flex justify-between md:items-center md:w-full'>
+						<div className='md:flex md:items-center'>
+							<h2 className='text-black font-serif text-xl'>
+								Lauren Dimberg Designs
+							</h2>
+						</div>
+						<div className='ml-auto uppercase text-l md:flex md:items-center md:mx-0'>
+							<NavLinks handleLinkClick={handleLinkClick} />
+						</div>
 					</div>
 					{/* hamburger menu to display on small screens*/}
 					<div className='flex items-center text-black mr-3 md:hidden cursor-pointer'>

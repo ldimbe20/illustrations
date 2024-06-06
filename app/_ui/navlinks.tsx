@@ -37,13 +37,11 @@ export default function NavLinks({
 				<p
 					onClick={handleLinkClick}
 					className={clsx(
-						"text-black tracking-widest custom-transition mx-5 md:mx-3",
+						"text-black underline-offset-4 decoration-1 tracking-widest custom-transition mx-5 md:mx-3",
 						{
-							"underline-offset-4 text-yellow-400":
-								!isDropdownOpen && pathname === "/",
-							"py-2 hover:font-bold hover:bg-sky-tint-light custom-transition":
-								isDropdownOpen,
-							"hover:underline-offset-4": !isDropdownOpen,
+							underline: !isDropdownOpen && pathname === "/",
+							"py-2 hover:bg-sky-tint-light custom-transition": isDropdownOpen,
+							"hover:underline": !isDropdownOpen,
 						}
 					)}
 				>
@@ -56,13 +54,12 @@ export default function NavLinks({
 				<p
 					onClick={handleLinkClick}
 					className={clsx(
-						"text-black tracking-widest custom-transition mx-5 md:mx-3",
+						"text-black underline-offset-4 decoration-1 tracking-widest custom-transition mx-5 md:mx-3",
 						{
-							"font-bold text-yellow-400":
-								!isDropdownOpen && pathname === "/services",
+							underline: !isDropdownOpen && pathname === "/services",
 							"py-2 hover:font-bold hover:bg-sky-tint-light custom-transition":
 								isDropdownOpen,
-							"hover:font-bold": !isDropdownOpen,
+							"hover:underline": !isDropdownOpen,
 						}
 					)}
 				>
@@ -75,13 +72,12 @@ export default function NavLinks({
 				<p
 					onClick={handleLinkClick}
 					className={clsx(
-						"text-black tracking-widest custom-transition mx-5 md:mx-3",
+						"text-black underline-offset-4 decoration-1 tracking-widest custom-transition mx-5 md:mx-3",
 						{
-							"font-bold text-yellow-400":
-								!isDropdownOpen && pathname === "/values",
+							underline: !isDropdownOpen && pathname === "/values",
 							"py-2 hover:font-bold hover:bg-sky-tint-light custom-transition":
 								isDropdownOpen,
-							"hover:font-bold": !isDropdownOpen,
+							"hover:underline": !isDropdownOpen,
 						}
 					)}
 				>
@@ -94,13 +90,12 @@ export default function NavLinks({
 				<p
 					onClick={handleLinkClick}
 					className={clsx(
-						"text-black tracking-widest custom-transition mx-5 md:mx-3",
+						"text-black underline-offset-4 decoration-1 tracking-widest custom-transition mx-5 md:mx-3",
 						{
-							"font-bold text-yellow-400":
-								!isDropdownOpen && pathname === "/about",
+							underline: !isDropdownOpen && pathname === "/about",
 							"py-2 hover:font-bold hover:bg-sky-tint-light custom-transition":
 								isDropdownOpen,
-							"hover:font-bold": !isDropdownOpen,
+							"hover:underline": !isDropdownOpen,
 						}
 					)}
 				>
@@ -116,13 +111,12 @@ export default function NavLinks({
 				<p
 					onClick={handleLinkClick}
 					className={clsx(
-						"text-black underline-offset-4 tracking-widest custom-transition mx-5 md:mx-3",
+						"text-black underline-offset-4 decoration-1 tracking-widest custom-transition mx-5 md:mx-3",
 						{
-							"font-bold text-yellow-400":
-								!isDropdownOpen && pathname === "/contact",
+							underline: !isDropdownOpen && pathname === "/contact",
 							"py-2 hover:font-bold hover:bg-sky-tint-light custom-transition":
 								isDropdownOpen,
-							"hover:font-bold": !isDropdownOpen,
+							"hover:underline": !isDropdownOpen,
 						}
 					)}
 				>
