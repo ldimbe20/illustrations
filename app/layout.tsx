@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "./_ui/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,13 +11,25 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-  );
+	return (
+		<html lang='en' className='scroll-smooth'>
+			<head>
+				<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+				<link
+					rel='apple-touch-icon'
+					href='/apple-icon?<generated>'
+					type='image/<generated>'
+					sizes='<generated>'
+				/>
+			</head>
+			<body className='m-0 p-0 bg-sky-bg'>
+				<Navbar />
+				{children}
+			</body>
+		</html>
+	);
 }
