@@ -32,74 +32,21 @@ export default function NavLinks({
 
 	return (
 		<>
-			{/* Home */}
-			<Link href='/'>
+			{/* Work */}
+			<Link href='/work'>
 				<p
 					onClick={handleLinkClick}
 					className={clsx(
-						"text-black underline-offset-4 decoration-1 tracking-widest custom-transition mx-5 md:mx-3",
+						"text-black underline-offset-8 decoration-1 tracking-widest custom-transition mx-5 md:mx-3",
 						{
-							underline: !isDropdownOpen && pathname === "/",
-							"py-2 hover:bg-sky-tint-light custom-transition": isDropdownOpen,
-							"hover:underline": !isDropdownOpen,
-						}
-					)}
-				>
-					Home
-				</p>
-			</Link>
-
-			{/* Services */}
-			<Link href='/services'>
-				<p
-					onClick={handleLinkClick}
-					className={clsx(
-						"text-black underline-offset-4 decoration-1 tracking-widest custom-transition mx-5 md:mx-3",
-						{
-							underline: !isDropdownOpen && pathname === "/services",
+							underline: !isDropdownOpen && pathname === "/work",
 							"py-2 hover:font-bold hover:bg-sky-tint-light custom-transition":
 								isDropdownOpen,
 							"hover:underline": !isDropdownOpen,
 						}
 					)}
 				>
-					Graphic Design
-				</p>
-			</Link>
-
-			{/* Values */}
-			<Link href='/values'>
-				<p
-					onClick={handleLinkClick}
-					className={clsx(
-						"text-black underline-offset-4 decoration-1 tracking-widest custom-transition mx-5 md:mx-3",
-						{
-							underline: !isDropdownOpen && pathname === "/values",
-							"py-2 hover:font-bold hover:bg-sky-tint-light custom-transition":
-								isDropdownOpen,
-							"hover:underline": !isDropdownOpen,
-						}
-					)}
-				>
-					Illustration
-				</p>
-			</Link>
-
-			{/* About */}
-			<Link href='/about'>
-				<p
-					onClick={handleLinkClick}
-					className={clsx(
-						"text-black underline-offset-4 decoration-1 tracking-widest custom-transition mx-5 md:mx-3",
-						{
-							underline: !isDropdownOpen && pathname === "/about",
-							"py-2 hover:font-bold hover:bg-sky-tint-light custom-transition":
-								isDropdownOpen,
-							"hover:underline": !isDropdownOpen,
-						}
-					)}
-				>
-					Development
+					Work
 				</p>
 			</Link>
 
@@ -111,7 +58,7 @@ export default function NavLinks({
 				<p
 					onClick={handleLinkClick}
 					className={clsx(
-						"text-black underline-offset-4 decoration-1 tracking-widest custom-transition mx-5 md:mx-3",
+						"text-black underline-offset-8 decoration-1 tracking-widest custom-transition mx-5 md:mx-3",
 						{
 							underline: !isDropdownOpen && pathname === "/contact",
 							"py-2 hover:font-bold hover:bg-sky-tint-light custom-transition":

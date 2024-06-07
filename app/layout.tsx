@@ -1,7 +1,7 @@
 /** @format */
 
 import type { Metadata } from "next";
-import { Crimson_Pro, Playfair_Display, Raleway } from "next/font/google";
+import { Crimson_Pro, Raleway } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_ui/navbar";
 

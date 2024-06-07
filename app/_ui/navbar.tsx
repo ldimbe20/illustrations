@@ -29,8 +29,8 @@ export default function Navbar() {
 					{/* regular menu to display on larger screens*/}
 					<div className='hidden md:flex justify-between md:items-center md:w-full'>
 						<div className='md:flex md:items-center'>
-							<h2 className='text-black font-serif text-xl'>
-								Lauren Dimberg Designs
+							<h2 className='text-black font-sans font-semibold text-2xl'>
+								Lauren Dimberg
 							</h2>
 						</div>
 						<div className='ml-auto uppercase text-l md:flex md:items-center md:mx-0'>
