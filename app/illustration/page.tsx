@@ -2,9 +2,9 @@
 "use client";
 import React from "react";
 import ImageGallery from "../_ui/imageGallery";
-import { designTypes } from "../data";
+import { illustrations } from "../data";
 
-const items = designTypes;
+const items = illustrations;
 
 export default function Illustration() {
 	return (
