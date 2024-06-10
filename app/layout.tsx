@@ -34,8 +34,8 @@ export default function RootLayout({
 				/>
 			</head>
 			<body className='m-0 p-0 bg-sky-bg'>
-					<Navbar />
-				{children}
+				<Navbar />
+				<div className='m-10'>{children}</div>
 			</body>
 		</html>
 	);
