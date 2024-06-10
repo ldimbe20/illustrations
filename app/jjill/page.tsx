@@ -1,14 +1,15 @@
 /** @format */
 "use client";
-import ImageGallery from "./_ui/imageGallery";
-import { designTypes } from "./data";
+import React from "react";
+import ImageGallery from "../_ui/imageGallery";
+import { designTypes } from "../data";
 
 const items = designTypes;
 
-export default function Home() {
+export default function JJill() {
 	return (
 		<div className='container flex flex-col items-center h-full pt-10 sm:px-10rem'>
-			<h3 className='mb-4 text-xl py-10'>Home</h3>
+			<h3 className='mb-4 text-xl py-10'>J.Jill</h3>
 			<ImageGallery items={items} />
 		</div>
 	);
