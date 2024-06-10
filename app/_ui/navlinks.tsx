@@ -3,10 +3,12 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect, MouseEventHandler } from "react";
+import { useState, useEffect, MouseEvent } from "react";
 
 interface NavLinksProps {
-	handleLinkClick: MouseEventHandler<HTMLParagraphElement>;
+	handleLinkClick: (
+		event: MouseEvent<HTMLParagraphElement | HTMLAnchorElement>
+	) => void;
 	isDropdownOpen?: boolean;
 }
 
@@ -15,6 +17,7 @@ export default function NavLinks({
 	isDropdownOpen,
 }: NavLinksProps) {
 	const [isSmallScreen, setIsSmallScreen] = useState(false);
+	const [isWorkDropdownOpen, setIsWorkDropdownOpen] = useState(false);
 	const pathname = usePathname();
 
 	useEffect(() => {
@@ -22,7 +25,7 @@ export default function NavLinks({
 			setIsSmallScreen(window.innerWidth < 640);
 		}
 
-		handleResize(); // Call handleResize initially to set the correct initial state
+		handleResize();
 		window.addEventListener("resize", handleResize);
 
 		return () => {
@@ -30,16 +33,34 @@ export default function NavLinks({
 		};
 	}, []);
 
+	const toggleWorkDropdown = () => {
+		setIsWorkDropdownOpen((prev) => !prev);
+	};
+
+	const closeWorkDropdown = () => {
+		setIsWorkDropdownOpen(false);
+	};
+
+	const handleDropdownLinkClick = (
+		event: MouseEvent<HTMLParagraphElement | HTMLAnchorElement>
+	) => {
+		handleLinkClick(event);
+		closeWorkDropdown();
+	};
+
 	return (
 		<>
 			{/* Work */}
-			<Link href='/work'>
+			<div className='relative'>
 				<p
-					onClick={handleLinkClick}
+					onClick={(event) => {
+						handleLinkClick(event);
+						toggleWorkDropdown();
+					}}
 					className={clsx(
-						"text-black underline-offset-8 decoration-1 tracking-widest custom-transition mx-5 md:mx-3",
+						"text-black underline-offset-8 decoration-1 tracking-widest custom-transition mx-5 md:mx-3 cursor-pointer",
 						{
-							underline: !isDropdownOpen && pathname === "/work",
+							underline: !isDropdownOpen && pathname === "/",
 							"py-2 hover:font-bold hover:bg-sky-tint-light custom-transition":
 								isDropdownOpen,
 							"hover:underline": !isDropdownOpen,
@@ -48,28 +69,73 @@ export default function NavLinks({
 				>
 					Work
 				</p>
-			</Link>
+				{isWorkDropdownOpen && (
+					<div className='absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md'>
+						<Link href='/graphics'>
+							<p
+								onClick={handleDropdownLinkClick}
+								className='block py-2 px-4 text-black hover:bg-gray-200 cursor-pointer'
+							>
+								Graphic Design
+							</p>
+						</Link>
+						<Link href='/illustration'>
+							<p
+								onClick={handleDropdownLinkClick}
+								className='block py-2 px-4 text-black hover:bg-gray-200 cursor-pointer'
+							>
+								Illustration
+							</p>
+						</Link>
+						<Link href='/development'>
+							<p
+								onClick={handleDropdownLinkClick}
+								className='block py-2 px-4 text-black hover:bg-gray-200 cursor-pointer'
+							>
+								Development
+							</p>
+						</Link>
+						{isSmallScreen && (
+							<Link href='/contact'>
+								<p
+									onClick={handleDropdownLinkClick}
+									className='block py-2 px-4 text-black hover:bg-gray-200 cursor-pointer'
+								>
+									Contact
+								</p>
+							</Link>
+						)}
+						<Link href='/'>
+							<p
+								onClick={handleDropdownLinkClick}
+								className='block py-2 px-4 text-black hover:bg-gray-200 cursor-pointer'
+							>
+								Home
+							</p>
+						</Link>
+					</div>
+				)}
+			</div>
 
 			{/* Contact */}
-			<Link
-				href={isSmallScreen ? "/ContactRedirect" : "/contact"}
-				target={isSmallScreen ? "_blank" : ""}
-			>
-				<p
-					onClick={handleLinkClick}
-					className={clsx(
-						"text-black underline-offset-8 decoration-1 tracking-widest custom-transition mx-5 md:mx-3",
-						{
-							underline: !isDropdownOpen && pathname === "/contact",
-							"py-2 hover:font-bold hover:bg-sky-tint-light custom-transition":
-								isDropdownOpen,
-							"hover:underline": !isDropdownOpen,
-						}
-					)}
-				>
-					Contact
-				</p>
-			</Link>
+			{!isSmallScreen && (
+				<Link href='/contact'>
+					<p
+						onClick={handleLinkClick}
+						className={clsx(
+							"text-black underline-offset-8 decoration-1 tracking-widest custom-transition mx-5 md:mx-3",
+							{
+								underline: !isDropdownOpen && pathname === "/contact",
+								"py-2 hover:font-bold hover:bg-sky-tint-light custom-transition":
+									isDropdownOpen,
+								"hover:underline": !isDropdownOpen,
+							}
+						)}
+					>
+						Contact
+					</p>
+				</Link>
+			)}
 		</>
 	);
 }
