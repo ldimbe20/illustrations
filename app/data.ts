@@ -35,6 +35,7 @@ export const graphics = [
 		link: "/block",
 		text: "Block Aero Technologies",
 		usesModal: false,
+		threeOnLargeScreen: true,
 	},
 	{
 		id: 2,
@@ -78,6 +79,61 @@ export const graphics = [
 	},
 ];
 
+// Different graphic projects based on customer
+
+export const block = [
+	{
+		id: 1,
+		image: "/portfolio/block/print/flier-1.jpg",
+		alt: "Instagram ad for Block Aero an aviation company",
+		link: "/block",
+		text: "Flyer created for Singapore Airshow",
+		usesModal: true,
+		threeOnLargeScreen: false,
+	},
+	{
+		id: 1,
+		image: "/portfolio/block/print/flier-2.jpg",
+		alt: "Instagram ad for Block Aero an aviation company",
+		link: "/block",
+		text: "Flyer created for China Parts Airshow",
+		usesModal: true,
+		threeOnLargeScreen: false,
+	},
+];
+
+export const blockDigital = [
+	{
+		id: 1,
+		image: "/portfolio/block/instagram_congrats.jpg",
+		alt: "Instagram ad for Block Aero an aviation company",
+		link: "/block",
+		text: "Flyer created for Singapore Airshow",
+		usesModal: true,
+		threeOnLargeScreen: true,
+	},
+	{
+		id: 1,
+		image: "/portfolio/block/instagram.jpg",
+		alt: "Instagram ad for Block Aero an aviation company",
+		link: "/block",
+		text: "Flyer created for China Parts Airshow",
+		usesModal: true,
+		threeOnLargeScreen: true,
+	},
+	{
+		id: 1,
+		image: "/portfolio/block/linkedIn.jpg",
+		alt: "LinkedIn ad for Block Aero an aviation company",
+		link: "/block",
+		text: "LinkedIn post",
+		usesModal: true,
+		threeOnLargeScreen: true,
+	},
+];
+
+// All Illustrations
+
 export const illustrations = [
 	{
 		alt: "sky",
@@ -85,6 +141,7 @@ export const illustrations = [
 		image: "/portfolio/art/sky.png",
 		text: "Night Sky",
 		usesModal: true,
+		threeOnLargeScreen: true,
 	},
 	{
 		alt: "Notebook with butterfly illustration",
@@ -92,6 +149,7 @@ export const illustrations = [
 		image: "/portfolio/art/vines.jpg",
 		text: "Butterfly",
 		usesModal: true,
+		threeOnLargeScreen: true,
 	},
 	{
 		alt: "Curled up fox",
@@ -99,6 +157,7 @@ export const illustrations = [
 		image: "/portfolio/art/fox.jpg",
 		text: "Fox Curled",
 		usesModal: true,
+		threeOnLargeScreen: true,
 	},
 	{
 		alt: "Illustration of cactus",
@@ -106,6 +165,7 @@ export const illustrations = [
 		image: "/portfolio/art/cactus.jpg",
 		text: "Fox Curled",
 		usesModal: true,
+		threeOnLargeScreen: true,
 	},
 	{
 		alt: "Illustration of cities",
@@ -113,6 +173,7 @@ export const illustrations = [
 		image: "/portfolio/art/cities.jpg",
 		text: "Mykonos",
 		usesModal: true,
+		threeOnLargeScreen: true,
 	},
 	{
 		alt: "Illustration of divbars",
@@ -120,6 +181,7 @@ export const illustrations = [
 		image: "/portfolio/art/div_bar.jpg",
 		text: "Dive Bar",
 		usesModal: true,
+		threeOnLargeScreen: true,
 	},
 	{
 		alt: "Illustration of palm trees",
@@ -127,6 +189,7 @@ export const illustrations = [
 		image: "/portfolio/art/palm_print.jpg",
 		text: "Mykonos",
 		usesModal: true,
+		threeOnLargeScreen: true,
 	},
 	{
 		alt: "Illustration of woman",
@@ -134,6 +197,7 @@ export const illustrations = [
 		image: "/portfolio/art/blue_lady.jpg",
 		text: "Mykonos",
 		usesModal: true,
+		threeOnLargeScreen: true,
 	},
 	{
 		alt: "Illustration of woman",
@@ -141,6 +205,7 @@ export const illustrations = [
 		image: "/portfolio/art/purple_lady.jpg",
 		text: "Mykonos",
 		usesModal: true,
+		threeOnLargeScreen: true,
 	},
 	{
 		alt: "Illustration of snake",
@@ -148,6 +213,7 @@ export const illustrations = [
 		image: "/portfolio/art/snake.jpg",
 		text: "Mykonos",
 		usesModal: true,
+		threeOnLargeScreen: true,
 	},
 	{
 		alt: "Illustration of mushroom",
@@ -155,6 +221,7 @@ export const illustrations = [
 		image: "/portfolio/art/mushroom.jpg",
 		text: "Mykonos",
 		usesModal: true,
+		threeOnLargeScreen: true,
 	},
 	{
 		alt: "Illustration of hedgehog",
@@ -169,6 +236,7 @@ export const illustrations = [
 		image: "/portfolio/art/bear.jpg",
 		text: "Mykonos",
 		usesModal: true,
+		threeOnLargeScreen: true,
 	},
 	{
 		alt: "Illustration of fox",
@@ -176,6 +244,7 @@ export const illustrations = [
 		image: "/portfolio/art/Fox2.jpg",
 		text: "Mykonos",
 		usesModal: true,
+		threeOnLargeScreen: true,
 	},
 	{
 		alt: "Illustration of deer",
@@ -183,6 +252,7 @@ export const illustrations = [
 		image: "/portfolio/art/deer.jpg",
 		text: "Mykonos",
 		usesModal: true,
+		threeOnLargeScreen: true,
 	},
 	{
 		alt: "Illustration of butterfly",
@@ -190,5 +260,6 @@ export const illustrations = [
 		image: "/portfolio/art/butterfly.jpg",
 		text: "Mykonos",
 		usesModal: true,
+		threeOnLargeScreen: true,
 	},
 ];
