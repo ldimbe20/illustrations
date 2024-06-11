@@ -5,9 +5,15 @@ type ImageGalleryProps = {
 	items: ImageCardProps[];
 };
 
-const ImageGallery: React.FC<ImageGalleryProps> =  ({ items }) => {
+const ImageGallery: React.FC<ImageGalleryProps> = ({ items }) => {
+	const threeOnLargeScreen = items.some((item) => item.threeOnLargeScreen);
+
 	return (
-		<div className='grid grid-cols-1 py-5 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+		<div
+			className={`grid grid-cols-1 py-10 md:grid-cols-2 lg:grid-cols-${
+				threeOnLargeScreen ? 3 : 2
+			} gap-4`}
+		>
 			{items.map((item, index) => (
 				<ImageCard
 					key={index}
@@ -16,6 +22,7 @@ const ImageGallery: React.FC<ImageGalleryProps> =  ({ items }) => {
 					link={item.link}
 					text={item.text}
 					usesModal={item.usesModal}
+					threeOnLargeScreen={item.threeOnLargeScreen}
 				/>
 			))}
 		</div>
