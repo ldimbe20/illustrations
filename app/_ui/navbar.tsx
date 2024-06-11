@@ -1,9 +1,9 @@
 /** @format */
 
 "use client";
-import Image from "next/image";
 import NavLinks from "./navlinks";
 import { useState } from "react";
+import HamburgerLinks from "./hamburgerLinks";
 
 export default function Navbar() {
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -39,7 +39,7 @@ export default function Navbar() {
 					</div>
 					{/* hamburger menu to display on small screens*/}
 					<div className='flex items-center text-black mr-3 md:hidden cursor-pointer'>
-						<div className='flex items-center relative h-full transition-delay hover:text-yellow-400'>
+						<div className='flex items-center relative h-full transition-delay hover:text-gray-800'>
 							<button onClick={toggleDropdown}>
 								<svg viewBox='0 0 100 100' className='w-9 h-9 items-center p-1'>
 									{/* top rectangle */}
@@ -91,8 +91,8 @@ export default function Navbar() {
 							</button>
 						</div>
 						{isDropdownOpen && (
-							<div className='absolute top-[75px] left-0 text-center right-0 bg-sky-tint transition-all duration-500 delay-100 pb-3'>
-								<NavLinks
+							<div className='absolute top-[75px] left-0 text-center right-0 bg-white transition-all duration-500 delay-100 pb-3 z-50'>
+								<HamburgerLinks
 									handleLinkClick={handleLinkClick}
 									isDropdownOpen={isDropdownOpen}
 								/>
