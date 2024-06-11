@@ -2,7 +2,6 @@
 
 export const designTypes = [
 	{
-		id: 1,
 		image: "/portfolio/main/bloc-main.jpg",
 		alt: "Instagram ad for Block Aero an aviation company",
 		link: "/graphics",
@@ -10,7 +9,6 @@ export const designTypes = [
 		usesModal: false,
 	},
 	{
-		id: 2,
 		image: "/portfolio/main/vines.jpg",
 		alt: "Butterfly illustration",
 		link: "/illustration",
@@ -18,7 +16,6 @@ export const designTypes = [
 		usesModal: false,
 	},
 	{
-		id: 3,
 		image: "/portfolio/main/butterfly-main.jpg",
 		alt: "Artstore art project",
 		link: "/development",
@@ -29,7 +26,6 @@ export const designTypes = [
 
 export const graphics = [
 	{
-		id: 1,
 		image: "/portfolio/main/bloc-main.jpg",
 		alt: "Instagram ad for Block Aero an aviation company",
 		link: "/block",
@@ -38,7 +34,6 @@ export const graphics = [
 		threeOnLargeScreen: true,
 	},
 	{
-		id: 2,
 		image: "/portfolio/main/cr-main.jpg",
 		alt: "Baby shower book",
 		link: "/gibson",
@@ -46,7 +41,6 @@ export const graphics = [
 		usesModal: false,
 	},
 	{
-		id: 3,
 		image: "/portfolio/main/clever.jpg",
 		alt: "Clever Factory gift bag",
 		link: "/clever",
@@ -54,7 +48,6 @@ export const graphics = [
 		usesModal: false,
 	},
 	{
-		id: 4,
 		image: "/portfolio/main/jjill-main.png",
 		alt: "J.Jill",
 		link: "/jjill",
@@ -62,7 +55,6 @@ export const graphics = [
 		usesModal: false,
 	},
 	{
-		id: 5,
 		image: "/portfolio/main/w-main.jpg",
 		alt: "Wildkin instagram",
 		link: "/wildkin",
@@ -70,7 +62,6 @@ export const graphics = [
 		usesModal: false,
 	},
 	{
-		id: 6,
 		image: "/portfolio/cr/witch_book.jpg",
 		alt: "Freelance book",
 		link: "/freelance",
@@ -83,7 +74,6 @@ export const graphics = [
 
 export const block = [
 	{
-		id: 1,
 		image: "/portfolio/block/print/flier-1.jpg",
 		alt: "Instagram ad for Block Aero an aviation company",
 		link: "/block",
@@ -92,7 +82,6 @@ export const block = [
 		threeOnLargeScreen: false,
 	},
 	{
-		id: 1,
 		image: "/portfolio/block/print/flier-2.jpg",
 		alt: "Instagram ad for Block Aero an aviation company",
 		link: "/block",
@@ -104,7 +93,6 @@ export const block = [
 
 export const blockDigital = [
 	{
-		id: 1,
 		image: "/portfolio/block/instagram_congrats.jpg",
 		alt: "Instagram ad for Block Aero an aviation company",
 		link: "/block",
@@ -113,7 +101,6 @@ export const blockDigital = [
 		threeOnLargeScreen: true,
 	},
 	{
-		id: 1,
 		image: "/portfolio/block/instagram.jpg",
 		alt: "Instagram ad for Block Aero an aviation company",
 		link: "/block",
@@ -122,7 +109,6 @@ export const blockDigital = [
 		threeOnLargeScreen: true,
 	},
 	{
-		id: 1,
 		image: "/portfolio/block/linkedIn.jpg",
 		alt: "LinkedIn ad for Block Aero an aviation company",
 		link: "/block",
@@ -132,6 +118,197 @@ export const blockDigital = [
 	},
 ];
 
+export const gibson = [
+	{
+		image: "/portfolio/cr/babyshower.jpg",
+		alt: "Baby shower book",
+		link: "",
+		text: "Custom Baby Shower",
+		usesModal: true,
+		threeOnLargeScreen: true,
+	},
+	{
+		image: "/portfolio/cr/blanket.jpg",
+		alt: "Baby shower book",
+		link: "",
+		text: "Custom Baby Shower",
+		usesModal: true,
+		threeOnLargeScreen: true,
+	},
+	{
+		image: "/portfolio/cr/letters_half.jpg",
+		alt: "Baby shower book",
+		link: "",
+		text: "Custom Baby Shower",
+		usesModal: true,
+		threeOnLargeScreen: true,
+	},
+	{
+		image: "/portfolio/cr/planner.jpg",
+		alt: "Baby shower book",
+		link: "",
+		text: "Custom Baby Shower",
+		usesModal: true,
+		threeOnLargeScreen: true,
+	},
+	{
+		image: "/portfolio/cr/diaperTag_pink.jpg",
+		alt: "Baby shower book",
+		link: "",
+		text: "Custom Baby Shower",
+		usesModal: true,
+		threeOnLargeScreen: true,
+	},
+	{
+		image: "/portfolio/cr/diaperTag.jpg",
+		alt: "Baby shower book",
+		link: "",
+		text: "Custom Baby Shower",
+		usesModal: true,
+		threeOnLargeScreen: true,
+	},
+	{
+		image: "/portfolio/cr/sticker.jpg",
+		alt: "Baby shower book",
+		link: "",
+		text: "Custom Baby Shower",
+		usesModal: true,
+		threeOnLargeScreen: true,
+	},
+	{
+		image: "/portfolio/cr/zebra_socks.jpg",
+		alt: "Baby shower book",
+		link: "",
+		text: "Custom Baby Shower",
+		usesModal: true,
+		threeOnLargeScreen: true,
+	},
+	{
+		image: "/portfolio/cr/humorCard.jpg",
+		alt: "Baby shower book",
+		link: "",
+		text: "Custom Baby Shower",
+		usesModal: true,
+		threeOnLargeScreen: true,
+	},
+];
+
+export const clever = [
+	{
+		id: 1,
+		image: "/portfolio/clever/christmas.jpg",
+		alt: "Christmas gift bags",
+		link: "",
+		text: "Christmas Bags",
+		usesModal: true,
+		threeOnLargeScreen: true,
+	},
+	{
+		image: "/portfolio/clever/easter.jpg",
+		alt: "Easter gift bags",
+		link: "",
+		text: "Easter Gift Bags",
+		usesModal: true,
+		threeOnLargeScreen: true,
+	},
+	{
+		image: "/portfolio/clever/val.jpg",
+		alt: "Valentine gift bags",
+		link: "",
+		text: "Valentine's Gift Bags",
+		usesModal: true,
+		threeOnLargeScreen: true,
+	},
+	{
+		image: "/portfolio/clever/val.jpg",
+		alt: "Valentine gift bags",
+		link: "",
+		text: "custom illustrations",
+		usesModal: true,
+		threeOnLargeScreen: true,
+	},
+];
+
+export const jjill = [
+	{
+		alt: "JJill Poster",
+		link: "",
+		image: "/portfolio/jjill/poster.jpg",
+		text: "JJill Poster",
+		usesModal: true,
+		threeOnLargeScreen: false,
+	},
+	{
+		alt: "JJill statements",
+		link: "",
+		image: "/portfolio/jjill/voucher.jpg",
+		text: "JJill Voucher",
+		usesModal: true,
+		threeOnLargeScreen: false,
+	},
+	{
+		alt: "JJill statements",
+		link: "",
+		image: "/portfolio/jjill/statements.jpg",
+		text: "JJill Statement",
+		usesModal: true,
+		threeOnLargeScreen: false,
+	},
+	{
+		alt: "JJill Magazine spread",
+		link: "",
+		image: "/portfolio/jjill/mag.jpg",
+		text: "JJill Magazine spread",
+		usesModal: true,
+		threeOnLargeScreen: false,
+	},
+];
+
+export const wildkinPhone = [
+	{
+		alt: "Wildkin Poster",
+		link: "",
+		image: "/portfolio/wildkin/wildkin_aztec.jpg",
+		text: "Wildkin Poster",
+		usesModal: true,
+		threeOnLargeScreen: true,
+	},
+	{
+		alt: "Wildkin Poster",
+		link: "",
+		image: "/portfolio/wildkin/wildkin_bag.jpg",
+		text: "Wildkin Poster",
+		usesModal: true,
+		threeOnLargeScreen: true,
+	},
+	{
+		alt: "Wildkin Poster",
+		link: "",
+		image: "/portfolio/wildkin/wildkin_tp.jpg",
+		text: "Wildkin Poster",
+		usesModal: true,
+		threeOnLargeScreen: true,
+	},
+];
+
+export const wildkin = [
+	{
+		alt: "Wildkin Poster",
+		link: "",
+		image: "/portfolio/wildkin/mockups.jpg",
+		text: "Wildkin Poster",
+		usesModal: true,
+		threeOnLargeScreen: false,
+	},
+	{
+		alt: "Wildkin Poster",
+		link: "",
+		image: "/portfolio/wildkin/mailchimp.jpg",
+		text: "Wildkin Poster",
+		usesModal: true,
+		threeOnLargeScreen: false,
+	},
+];
 // All Illustrations
 
 export const illustrations = [
