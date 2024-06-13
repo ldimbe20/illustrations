@@ -1,112 +1,51 @@
 /** @format */
 
-import clsx from "clsx";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState, MouseEvent } from "react";
+import React from "react";
+import FlyoutLink from "./flyoutLink";
 
-interface NavLinksProps {
-	handleLinkClick: (
-		event: MouseEvent<HTMLParagraphElement | HTMLAnchorElement>
-	) => void;
-	isDropdownOpen?: boolean;
-}
-
-export default function NavLinks({
-	handleLinkClick,
-	isDropdownOpen,
-}: NavLinksProps) {
-	const [isWorkDropdownOpen, setIsWorkDropdownOpen] = useState(false);
-	const pathname = usePathname();
-
-	const toggleWorkDropdown = () => {
-		setIsWorkDropdownOpen((prev) => !prev);
-	};
-
-	const closeWorkDropdown = () => {
-		setIsWorkDropdownOpen(false);
-	};
-
-	const handleDropdownLinkClick = (
-		event: MouseEvent<HTMLParagraphElement | HTMLAnchorElement>
-	) => {
-		handleLinkClick(event);
-		closeWorkDropdown();
-	};
-
+const PricingContent = () => {
 	return (
-		<>
-			<div className='relative'>
-				<p
-					onClick={(event) => {
-						handleLinkClick(event);
-						toggleWorkDropdown();
-					}}
-					className={clsx(
-						"text-black underline-offset-8 decoration-1 tracking-widest custom-transition mx-5 md:mx-3 cursor-pointer",
-						{
-							underline: !isDropdownOpen && pathname === "/",
-							"py-2 hover:font-bold hover:bg-sky-tint-light custom-transition":
-								isDropdownOpen,
-							"hover:underline": !isDropdownOpen,
-						}
-					)}
-				>
-					Work
-				</p>
-				{isWorkDropdownOpen && (
-					<div className='absolute top-[31px] -ml-1 mt-3 w-48 bg-slate-100 underline-offset-8 tracking-widest custom-transition mx-5 text-black transition-all duration-500 ease-in-out'>
-						<Link href='/graphics'>
-							<p
-								onClick={handleDropdownLinkClick}
-								className='py-2 px-4 text-opacity-90 hover:underline decoration-1 cursor-pointer'
-							>
-								Graphic Design
-							</p>
-						</Link>
-						<Link href='/illustration'>
-							<p
-								onClick={handleDropdownLinkClick}
-								className='py-2 px-4 text-opacity-90 hover:underline decoration-1 cursor-pointer'
-							>
-								Illustration
-							</p>
-						</Link>
-						<Link href='/development'>
-							<p
-								onClick={handleDropdownLinkClick}
-								className='py-2 px-4 text-opacity-90 hover:underline decoration-1 cursor-pointer'
-							>
-								Development
-							</p>
-						</Link>
-						<Link href='/'>
-							<p
-								onClick={handleDropdownLinkClick}
-								className='py-2 px-4 text-opacity-90 hover:underline decoration-1 cursor-pointer'
-							>
-								Home
-							</p>
-						</Link>
-					</div>
-				)}
+		<div className='w-64 bg-white p-6 shadow-xl'>
+			<div className='mb-3 space-y-3'>
+				<h3 className='font-semibold'>For Individuals</h3>
+				<a href='#' className='block text-sm hover:underline'>
+					Introduction
+				</a>
+				<a href='#' className='block text-sm hover:underline'>
+					Pay as you go
+				</a>
 			</div>
-			<Link href='/contact'>
-				<p
-					onClick={handleLinkClick}
-					className={clsx(
-						"text-black underline-offset-8 decoration-1 tracking-widest custom-transition mx-5 md:mx-3",
-						{
-							underline: !isDropdownOpen && pathname === "/contact",
-							"py-2 hover:font-bold hover:bg-sky-tint-light custom-transition":
-								isDropdownOpen,
-							"hover:underline": !isDropdownOpen,
-						}
-					)}
-				>
-					Contact
-				</p>
-			</Link>
-		</>
+			<div className='mb-6 space-y-3'>
+				<h3 className='font-semibold'>For Companies</h3>
+				<a href='#' className='block text-sm hover:underline'>
+					Startups
+				</a>
+				<a href='#' className='block text-sm hover:underline'>
+					SMBs
+				</a>
+				<a href='#' className='block text-sm hover:underline'>
+					Enterprise
+				</a>
+			</div>
+			<button className='w-full rounded-lg border-2 border-neutral-950 px-4 py-2 font-semibold transition-colors hover:bg-neutral-950 hover:text-white'>
+				Contact sales
+			</button>
+		</div>
 	);
-}
+};
+
+const Navbar = () => {
+	return (
+		<div className='flex'>
+			<FlyoutLink href='/pricing' FlyoutContent={PricingContent}>
+				Pricing
+			</FlyoutLink>
+			<FlyoutLink href='/contact'>
+				Contact
+			</FlyoutLink>
+			{/* Add other links as needed */}
+		</div>
+	);
+};
+
+export default Navbar;
