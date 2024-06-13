@@ -55,11 +55,11 @@ export default function NavLinks({
 					Work
 				</p>
 				{isWorkDropdownOpen && (
-					<div className='absolute top-[31px] -ml-1 mt-3 w-48 bg-slate-100 underline-offset-8 decoration-1 tracking-widest custom-transition mx-5 text-black'>
+					<div className='absolute top-[31px] -ml-1 mt-3 w-48 bg-slate-100 underline-offset-8 tracking-widest custom-transition mx-5 text-black'>
 						<Link href='/graphics'>
 							<p
 								onClick={handleDropdownLinkClick}
-								className='py-2 px-4 text-black text-opacity-90 hover:underline cursor-pointer'
+								className='py-2 px-4 text-opacity-90 hover:underline decoration-1 cursor-pointer'
 							>
 								Graphic Design
 							</p>
@@ -67,7 +67,7 @@ export default function NavLinks({
 						<Link href='/illustration'>
 							<p
 								onClick={handleDropdownLinkClick}
-								className='py-2 px-4 text-black text-opacity-90 hover:underline cursor-pointer'
+								className='py-2 px-4 text-opacity-90 hover:underline decoration-1 cursor-pointer'
 							>
 								Illustration
 							</p>
@@ -75,7 +75,7 @@ export default function NavLinks({
 						<Link href='/development'>
 							<p
 								onClick={handleDropdownLinkClick}
-								className='py-2 px-4 text-black text-opacity-90 hover:underline cursor-pointer'
+								className='py-2 px-4 text-opacity-90 hover:underline decoration-1 cursor-pointer'
 							>
 								Development
 							</p>
@@ -83,7 +83,7 @@ export default function NavLinks({
 						<Link href='/'>
 							<p
 								onClick={handleDropdownLinkClick}
-								className='py-2 px-4 text-black text-opacity-90 hover:underline cursor-pointer'
+								className='py-2 px-4 text-opacity-90 hover:underline decoration-1 cursor-pointer'
 							>
 								Home
 							</p>
