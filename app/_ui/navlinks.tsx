@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect, MouseEvent } from "react";
+import { useState, MouseEvent } from "react";
 
 interface NavLinksProps {
 	handleLinkClick: (
@@ -55,7 +55,7 @@ export default function NavLinks({
 					Work
 				</p>
 				{isWorkDropdownOpen && (
-					<div className='absolute top-[31px] -ml-1 mt-3 w-48 bg-slate-100 underline-offset-8 tracking-widest custom-transition mx-5 text-black'>
+					<div className='absolute top-[31px] -ml-1 mt-3 w-48 bg-slate-100 underline-offset-8 tracking-widest custom-transition mx-5 text-black transition-all duration-500 ease-in-out'>
 						<Link href='/graphics'>
 							<p
 								onClick={handleDropdownLinkClick}
