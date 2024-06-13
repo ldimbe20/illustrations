@@ -17,7 +17,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items }) => {
 	return (
 		<div className='flex justify-center'>
 			<div
-				className={`grid grid-cols-1 py-10 md:grid-cols-2 ${gridColsClass} gap-4`}
+				className={`grid grid-cols-1 py-10 md:grid-cols-2 ${gridColsClass} gap-4 z-0`}
 			>
 				{items.map((item, index) => (
 					<ImageCard

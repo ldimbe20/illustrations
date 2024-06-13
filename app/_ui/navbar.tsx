@@ -34,7 +34,7 @@ export default function Navbar() {
 							</h2>
 						</div>
 						<div className='ml-auto uppercase text-l md:flex md:items-center md:mx-0'>
-							<NavLinks handleLinkClick={handleLinkClick} />
+							<NavLinks />
 						</div>
 					</div>
 					{/* hamburger menu to display on small screens*/}

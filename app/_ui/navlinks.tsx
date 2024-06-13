@@ -1,51 +1,57 @@
 /** @format */
 
-import React from "react";
 import FlyoutLink from "./flyoutLink";
+import AnimationLinks from "./linksAnimations";
 
-const PricingContent = () => {
+const Portfolio = () => {
 	return (
 		<div className='w-64 bg-white p-6 shadow-xl'>
 			<div className='mb-3 space-y-3'>
-				<h3 className='font-semibold'>For Individuals</h3>
-				<a href='#' className='block text-sm hover:underline'>
-					Introduction
-				</a>
-				<a href='#' className='block text-sm hover:underline'>
-					Pay as you go
-				</a>
+				<AnimationLinks
+					text='Graphic Design'
+					href='/graphics'
+					isHeader={true}
+				/>
+
+				<AnimationLinks
+					text='Graphic Design'
+					href='/graphics'
+					isHeader={false}
+				/>
+
+				<AnimationLinks text='C.R Gibson' href='/gibson' isHeader={false} />
+				<AnimationLinks
+					text='The Clever Factory'
+					href='/clever'
+					isHeader={false}
+				/>
+				<AnimationLinks text='J.Jill Clothing' href='/jjill' isHeader={false} />
+				<AnimationLinks text='Wildkin' href='/jjill' isHeader={false} />
 			</div>
 			<div className='mb-6 space-y-3'>
-				<h3 className='font-semibold'>For Companies</h3>
-				<a href='#' className='block text-sm hover:underline'>
-					Startups
-				</a>
-				<a href='#' className='block text-sm hover:underline'>
-					SMBs
-				</a>
-				<a href='#' className='block text-sm hover:underline'>
-					Enterprise
-				</a>
+				<AnimationLinks
+					text='Illustrations'
+					href='/illustration'
+					isHeader={true}
+				/>
 			</div>
 			<button className='w-full rounded-lg border-2 border-neutral-950 px-4 py-2 font-semibold transition-colors hover:bg-neutral-950 hover:text-white'>
-				Contact sales
+				Contact Me
 			</button>
 		</div>
 	);
 };
 
-const Navbar = () => {
+const NavLinks = () => {
 	return (
-		<div className='flex'>
-			<FlyoutLink href='/pricing' FlyoutContent={PricingContent}>
-				Pricing
+		<div className='flex z-50'>
+			<FlyoutLink href='/' FlyoutContent={Portfolio}>
+				Work
 			</FlyoutLink>
-			<FlyoutLink href='/contact'>
-				Contact
-			</FlyoutLink>
-			{/* Add other links as needed */}
+			<FlyoutLink href='/contact'>Contact</FlyoutLink>
 		</div>
 	);
 };
 
-export default Navbar;
+export default NavLinks;
+

@@ -14,7 +14,7 @@ export default function Graphics() {
 	}, []);
 
 	return (
-		<div className='container flex flex-col items-center h-full pt-10 px-10'>
+		<div className='container flex flex-col items-center h-full pt-10 px-10 z-0'>
 			<div
 				className={`h-full py-10 text-center md:flex md:justify-between transition-opacity duration-700 ease-in-out ${
 					loaded ? "opacity-100" : "opacity-0"
