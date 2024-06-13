@@ -19,11 +19,11 @@ export default function HamburgerLinks({
 	const pathname = usePathname();
 
 	return (
-		<div className='text-center'>
+		<div className='text-center underline-offset-8 decoration-1 mt-3'>
 			<Link href='/graphics'>
 				<p
 					onClick={handleLinkClick}
-					className='block py-2 px-4 text-black hover:bg-gray-200 cursor-pointer'
+					className='block py-2 px-4 text-black hover:underline cursor-pointer'
 				>
 					Graphic Design
 				</p>
@@ -31,7 +31,7 @@ export default function HamburgerLinks({
 			<Link href='/illustration'>
 				<p
 					onClick={handleLinkClick}
-					className='block py-2 px-4 text-black hover:bg-gray-200 cursor-pointer'
+					className='block py-2 px-4 text-black hover:underline cursor-pointer'
 				>
 					Illustration
 				</p>
@@ -39,7 +39,7 @@ export default function HamburgerLinks({
 			<Link href='/development'>
 				<p
 					onClick={handleLinkClick}
-					className='block py-2 px-4 text-black hover:bg-gray-200 cursor-pointer'
+					className='block py-2 px-4 text-black hover:underline cursor-pointer'
 				>
 					development
 				</p>
@@ -47,7 +47,7 @@ export default function HamburgerLinks({
 			<Link href='/'>
 				<p
 					onClick={handleLinkClick}
-					className='block py-2 px-4 text-black hover:bg-gray-200 cursor-pointer'
+					className='block py-2 px-4 text-black hover:underline cursor-pointer'
 				>
 					Work
 				</p>

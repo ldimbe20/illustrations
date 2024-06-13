@@ -55,11 +55,11 @@ export default function NavLinks({
 					Work
 				</p>
 				{isWorkDropdownOpen && (
-					<div className='absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md'>
+					<div className='absolute top-[31px] -ml-1 mt-3 w-48 bg-slate-100 underline-offset-8 decoration-1 tracking-widest custom-transition mx-5 text-black'>
 						<Link href='/graphics'>
 							<p
 								onClick={handleDropdownLinkClick}
-								className='block py-2 px-4 text-black hover:bg-gray-200 cursor-pointer'
+								className='py-2 px-4 text-black text-opacity-90 hover:underline cursor-pointer'
 							>
 								Graphic Design
 							</p>
@@ -67,7 +67,7 @@ export default function NavLinks({
 						<Link href='/illustration'>
 							<p
 								onClick={handleDropdownLinkClick}
-								className='block py-2 px-4 text-black hover:bg-gray-200 cursor-pointer'
+								className='py-2 px-4 text-black text-opacity-90 hover:underline cursor-pointer'
 							>
 								Illustration
 							</p>
@@ -75,16 +75,15 @@ export default function NavLinks({
 						<Link href='/development'>
 							<p
 								onClick={handleDropdownLinkClick}
-								className='block py-2 px-4 text-black hover:bg-gray-200 cursor-pointer'
+								className='py-2 px-4 text-black text-opacity-90 hover:underline cursor-pointer'
 							>
 								Development
 							</p>
 						</Link>
-
 						<Link href='/'>
 							<p
 								onClick={handleDropdownLinkClick}
-								className='block py-2 px-4 text-black hover:bg-gray-200 cursor-pointer'
+								className='py-2 px-4 text-black text-opacity-90 hover:underline cursor-pointer'
 							>
 								Home
 							</p>

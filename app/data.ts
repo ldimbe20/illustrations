@@ -219,14 +219,6 @@ export const clever = [
 		usesModal: true,
 		threeOnLargeScreen: true,
 	},
-	{
-		image: "/portfolio/clever/val.jpg",
-		alt: "Valentine gift bags",
-		link: "",
-		text: "custom illustrations",
-		usesModal: true,
-		threeOnLargeScreen: true,
-	},
 ];
 
 export const jjill = [
@@ -254,6 +246,9 @@ export const jjill = [
 		usesModal: true,
 		threeOnLargeScreen: false,
 	},
+];
+
+export const jjillSingle = [
 	{
 		alt: "JJill Magazine spread",
 		link: "",
@@ -431,7 +426,11 @@ export const illustrations = [
 		usesModal: true,
 		threeOnLargeScreen: true,
 	},
-	{
+];
+
+
+export const illustrationsTwo = [
+{
 		alt: "Illustration of butterfly",
 		link: "",
 		image: "/portfolio/art/butterfly.jpg",
@@ -439,4 +438,4 @@ export const illustrations = [
 		usesModal: true,
 		threeOnLargeScreen: true,
 	},
-];
+]

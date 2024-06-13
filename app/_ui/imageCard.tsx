@@ -12,7 +12,6 @@ export type ImageCardProps = {
 	text: string;
 	usesModal: boolean;
 	// certain galleries use the modal while others do not
-	threeOnLargeScreen: boolean;
 };
 
 const ImageCard: React.FC<ImageCardProps> = ({

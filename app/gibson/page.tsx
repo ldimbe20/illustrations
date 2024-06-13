@@ -11,13 +11,15 @@ export default function Gibson() {
 		<>
 			<div className='container flex flex-col items-center h-full pt-10 px-10'>
 				<div className='h-full py-10 text-center md:flex md:justify-between'>
-					<h3 className='text-black font-sans font-semibold text-2xl text-center'>
+					<h3 className='text-black font-sans font-semibold text-2xl text-left'>
 						C.R Gibson
 					</h3>
-					<p className='pt-5 md:w-1/3'>
-						lorem ipsum dolor sit amet, consectetur adipis lorem ipsomething
-						lorem ipsum dolor sit amet, consectetur adipis lorem ipsomething
-						lorem ipsum dolor sit amet, consectetur adipis lorem ipsomething
+					<p className='md:w-1/2 text-left'>
+						As a designer for C.R. Gibson, I delved into everything
+						baby-related, researching, updating, and designing new products for
+						their baby department. My work included creating renders for
+						potential products and developing items from start to
+						finish. Below are some of my favorite creations and adorable babies!
 					</p>
 				</div>
 				<ImageGallery items={items} />
