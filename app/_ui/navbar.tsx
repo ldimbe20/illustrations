@@ -24,7 +24,7 @@ export default function Navbar() {
 
 	return (
 		<>
-			<div className='w-full h-15 py-3 sticky bg-white border-b-2 border-slate-500'>
+			<div className='w-full h-15 py-3 sticky bg-slate-100 border-b-2 border-slate-500 z-50'>
 				<div className='flex justify-between items-center ml-2 md:mr-2'>
 					{/* regular menu to display on larger screens*/}
 					<div className='hidden md:flex justify-between md:items-center md:w-full'>
@@ -34,7 +34,7 @@ export default function Navbar() {
 							</h2>
 						</div>
 						<div className='ml-auto uppercase text-l md:flex md:items-center md:mx-0'>
-							<NavLinks handleLinkClick={handleLinkClick} />
+							<NavLinks />
 						</div>
 					</div>
 					{/* hamburger menu to display on small screens*/}
@@ -91,7 +91,7 @@ export default function Navbar() {
 							</button>
 						</div>
 						{isDropdownOpen && (
-							<div className='absolute top-[75px] left-0 text-center right-0 bg-white transition-all duration-500 delay-100 pb-3 z-50'>
+							<div className='absolute top-[62px] left-0 text-center right-0 bg-slate-100 transition-all duration-500 delay-100 pb-3 z-50 uppercase'>
 								<HamburgerLinks
 									handleLinkClick={handleLinkClick}
 									isDropdownOpen={isDropdownOpen}
