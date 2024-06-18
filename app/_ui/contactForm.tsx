@@ -10,8 +10,6 @@ const ContactForm = () => {
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
-		console.log("EMAIL:", process.env.EMAIL);
-		console.log("PASSWORD:", process.env.PASSWORD);
 
 		const response = await fetch("/api/contact", {
 			method: "POST",

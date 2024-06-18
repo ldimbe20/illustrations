@@ -24,7 +24,7 @@ export default function Navbar() {
 
 	return (
 		<>
-			<div className='w-full h-15 py-3 sticky bg-slate-100 border-b-2 border-slate-500'>
+			<div className='w-full h-15 py-3 sticky bg-slate-100 border-b-2 border-slate-500 z-50'>
 				<div className='flex justify-between items-center ml-2 md:mr-2'>
 					{/* regular menu to display on larger screens*/}
 					<div className='hidden md:flex justify-between md:items-center md:w-full'>
