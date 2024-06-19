@@ -32,7 +32,7 @@ export default function Clever() {
 						Clever Factory.
 					</p>
 				</div>
-				<ImageGallery items={items} />
+				<ImageGallery items={items}/>
 			</div>
 			;
 		</>

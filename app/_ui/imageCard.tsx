@@ -39,7 +39,7 @@ const ImageCard: React.FC<ImageCardProps> = ({
 		<>
 			{usesModal ? (
 				<div // Render a div instead of Link when usesModal is true
-					className={`relative block overflow-hidden cursor-pointer transition-opacity duration-1000 ease-in-out z-0 ${
+					className={`relative block overflow-hidden cursor-pointer transition-opacity duration-2000 ease-in-out z-0 ${
 						isLoaded ? "opacity-100" : "opacity-0"
 					}`}
 					onClick={() => handleClick(image)}
