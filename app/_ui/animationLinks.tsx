@@ -27,34 +27,24 @@ const AnimationLinks: React.FC<ImageCardProps> = ({ text, href, isHeader }) => {
 					<h3
 						onMouseEnter={handleMouseEnter}
 						onMouseLeave={handleMouseLeave}
-						className='relative text-black mr-5 font-semibold z-50'
-						style={{ position: "relative", display: "inline-block" }}
+						className={`relative text-black mr-5 md:ml-0 font-semibold z-50 block w-full py-2 px-4 transition-colors duration-300 ${
+							open && "bg-slate-300"
+						}`}
 					>
 						{text}
-						<span
-							style={{
-								transform: open ? "scaleX(1)" : "scaleX(0)",
-							}}
-							className='absolute -bottom-1 -left-2 -right-2 h-0.5 origin-left scale-x-0 rounded-full bg-slate-500 transition-transform duration-300 ease-out'
-						/>
 					</h3>
 				</Link>
 			) : (
 				<Link href={href}>
-					<p
+					<h3
 						onMouseEnter={handleMouseEnter}
 						onMouseLeave={handleMouseLeave}
-						className='block text-black ml-3 mt-3 text-small z-50'
-						style={{ position: "relative", display: "inline-block" }}
+						className={`relative text-black mr-5 md:ml-0  z-50 block w-full py-2 px-4 transition-colors duration-300 ${
+							open && "bg-slate-300"
+						}`}
 					>
 						{text}
-						<span
-							style={{
-								transform: open ? "scaleX(1)" : "scaleX(0)",
-							}}
-							className='absolute -bottom-1 -left-2 -right-2 h-0.5 origin-left scale-x-0 rounded-full bg-slate-500 transition-transform duration-300 ease-out'
-						/>
-					</p>
+					</h3>
 				</Link>
 			)}
 		</>

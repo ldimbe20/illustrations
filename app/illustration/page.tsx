@@ -21,7 +21,7 @@ export default function Illustration() {
 					loaded ? "opacity-100" : "opacity-0"
 				}`}
 			>
-				<h3 className='text-black font-sans font-semibold text-2xl text-left'>
+				<h3 className='text-black font-sans font-semibold text-2xl text-left mb-5 md:mb-0'>
 					Illustrations{" "}
 				</h3>
 				<p className='md:w-1/2 text-left'>

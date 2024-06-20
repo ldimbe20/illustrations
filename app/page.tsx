@@ -20,7 +20,7 @@ export default function Home() {
 						loaded ? "opacity-100" : "opacity-0"
 					}`}
 				>
-					<h3 className='text-black font-sans font-semibold text-2xl text-left md:w-1/3 '>
+					<h3 className='text-black font-sans font-semibold mb-5 text-2xl text-left md:w-1/3 md:mb-0'>
 						Hey I’m Lauren!
 						<br />
 						Graphic Designer? Illustrator? Developer?? Ok, just call me Lauren.

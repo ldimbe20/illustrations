@@ -14,7 +14,6 @@ interface HamburgerLinksProps {
 
 export default function HamburgerLinks({
 	handleLinkClick,
-	isDropdownOpen,
 }: HamburgerLinksProps) {
 	const pathname = usePathname();
 
