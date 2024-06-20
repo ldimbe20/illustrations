@@ -58,7 +58,7 @@ const ImageCard: React.FC<ImageCardProps> = ({
 			) : (
 				<Link
 					href={link}
-					className={`relative block overflow-hidden transition-opacity duration-2000 ease-in-out ${
+					className={`relative block overflow-hidden transition-opacity duration-1000 ease-in-out ${
 						isLoaded ? "opacity-100" : "opacity-0"
 					}`}
 					onMouseEnter={() => setIsHovered(true)}

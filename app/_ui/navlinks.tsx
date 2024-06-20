@@ -1,7 +1,7 @@
 /** @format */
 
 import FlyoutLink from "./flyoutLink";
-import AnimationLinks from "./linksAnimations";
+import AnimationLinks from "./animationLinks";
 
 const Portfolio = () => {
 	return (

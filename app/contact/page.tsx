@@ -19,10 +19,20 @@ export default function ContactPage() {
 					}`}
 				>
 					<h3 className='text-black font-sans font-semibold text-2xl text-left'>
-						The Clever Factory
+						Let's Talk!
 					</h3>
+					<p className='md:w-1/2 text-left'>
+						Fill in the form below and I will get back to you as soon as
+						possible
+					</p>
 				</div>
-				<ContactForm />
+				<div
+					className={`py-10 text-center md:flex md:justify-between transition-opacity duration-1000 ease-in-out ${
+						loaded ? "opacity-100" : "opacity-0"
+					}`}
+				>
+					<ContactForm />
+				</div>
 			</div>
 			;
 		</>
