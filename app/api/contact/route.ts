@@ -4,24 +4,15 @@ import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(request: Request) {
-	console.log("Email:", process.env.EMAIL);
-	console.log("Client ID:", process.env.CLIENT);
-	console.log("Client Secret:", process.env.CLIENT_SECRET);
-	console.log("Refresh Token:", process.env.REFRESH_TOKEN);
 	try {
 		const { name, email, message } = await request.json();
-// need to refreshtokenc before 
 
 
 		const transporter = nodemailer.createTransport({
 			service: "gmail",
-			secure: true,
 			auth: {
-				type: "OAuth2",
 				user: process.env.EMAIL,
-				clientId: process.env.CLIENT,
-				clientSecret: process.env.CLIENT_SECRET,
-				refreshToken: process.env.REFRESH_TOKEN,
+				pass: process.env.PASS,
 			},
 		});
 

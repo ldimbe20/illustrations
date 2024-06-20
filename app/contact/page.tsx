@@ -27,7 +27,7 @@ export default function ContactPage() {
 					</p>
 				</div>
 				<div
-					className={`h-full py-10 text-center md:flex md:justify-between transition-opacity duration-1000 ease-in-out ${
+					className={`py-10 text-center md:flex md:justify-between transition-opacity duration-1000 ease-in-out ${
 						loaded ? "opacity-100" : "opacity-0"
 					}`}
 				>
