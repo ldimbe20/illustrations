@@ -2,7 +2,7 @@
 "use client";
 import React from "react";
 import ImageGallery from "../_ui/imageGallery";
-import { designTypes } from "../data";
+import { designTypes } from "../data_exports";
 
 const items = designTypes;
 

@@ -2,7 +2,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import ImageGallery from "../_ui/imageGallery";
-import { illustrations, illustrationsTwo } from "../data";
+import { illustrations, illustrationsTwo } from "../data_exports";
 
 const items = illustrations;
 const itemTwo = illustrationsTwo;

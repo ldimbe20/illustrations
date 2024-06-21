@@ -2,7 +2,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import ImageGallery from "../_ui/imageGallery";
-import { designTypes, gibson } from "../data";
+import { designTypes, gibson } from "../data_exports";
 
 const items = gibson;
 

@@ -2,7 +2,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import ImageGallery from "../_ui/imageGallery";
-import { block, blockDigital } from "../data";
+import { block, blockDigital } from "../data_exports";
 
 const items = blockDigital;
 

@@ -2,11 +2,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import ImageGallery from "../_ui/imageGallery";
-import { jjill, jjillSingle } from "../data";
+import { jjill, jjillSingle } from "../data_exports";
 
 const items = jjill;
 const itemsTwo = jjillSingle;
-
 
 export default function JJill() {
 	const [loaded, setLoaded] = useState(false);

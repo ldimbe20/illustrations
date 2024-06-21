@@ -2,7 +2,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import ImageGallery from "../_ui/imageGallery";
-import { clever } from "../data";
+import { clever } from "../data_exports";
 
 const items = clever;
 

@@ -1,5 +1,7 @@
 /** @format */
 
+import AnimationLinks from "./_ui/animationLinks";
+
 export const designTypes = [
 	{
 		image: "/portfolio/main/bloc-main.jpg",
@@ -439,3 +441,34 @@ export const illustrationsTwo = [
 		threeOnLargeScreen: true,
 	},
 ]
+
+// Navigation links
+
+export const Portfolio = () => {
+	return (
+		<div className='w-64 bg-slate-100 shadow-xl text-center'>
+			<div className='space-y-3 text-xl'>
+				<AnimationLinks
+					text='Graphic Design'
+					href='/graphics'
+					isHeader={true}
+				/>
+			</div>
+			<AnimationLinks text='C.R Gibson' href='/gibson' isHeader={false} />
+			<AnimationLinks
+				text='The Clever Factory'
+				href='/clever'
+				isHeader={false}
+			/>
+			<AnimationLinks text='J.Jill' href='/jjill' isHeader={false} />
+			<AnimationLinks text='Wildkin' href='/jjill' isHeader={false} />
+			<div className='text-xl'>
+				<AnimationLinks
+					text='Illustrations'
+					href='/illustration'
+					isHeader={true}
+				/>
+			</div>
+		</div>
+	);
+};

@@ -2,9 +2,13 @@
 "use client";
 import NavLinks from "./navlinks";
 import { useState } from "react";
-import HamburgerLinks from "./hamburgerLinks";
-import { motion, AnimatePresence } from "framer-motion";
-import HamburgerLinks2 from "./hamburgerLink2";
+import FlyoutLink from "./flyoutLink";
+import AnimationLinks from "./animationLinks";
+import { Portfolio } from "../data_exports";
+
+
+const PortfolioLinks = Portfolio
+
 
 export default function Navbar() {
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -19,7 +23,7 @@ export default function Navbar() {
 
 	return (
 		<>
-			<div className='w-full h-15 py-3 sticky bg-slate-100 border-b-2 border-slate-500 z-50'>
+			<div className='w-full h-15 py-3 sticky bg-slate-100 border-b-4 border-slate-500 z-50'>
 				<div className='flex justify-between items-center ml-2 md:mr-2'>
 					{/* regular menu to display on larger screens*/}
 					<div className='hidden md:flex justify-between md:items-center md:w-full'>
@@ -40,71 +44,76 @@ export default function Navbar() {
 								onMouseEnter={toggleDropdown}
 								onMouseLeave={toggleDropdown}
 							>
-								<button>
-									<svg
-										viewBox='0 0 100 100'
-										className='w-9 h-9 items-center p-1'
-									>
-										{/* top rectangle */}
-										{!hideRectangle && (
-											<rect
-												className='fill-current rounded-lg'
-												width='80'
-												height='5'
-												x='10'
-												y='20'
-												rx='5'
-												ry='5'
-											/>
-										)}
-										{/* middle rectangles */}
-										<rect
-											className='fill-current transition-transform duration-300'
-											width='80'
-											height='5'
-											x='10'
-											y='50'
-											rx='5'
-											ry='5'
-											transform={rotate ? "rotate(45  50 55)" : ""}
-										/>
-										<rect
-											className='fill-current transition-transform duration-300'
-											width='80'
-											height='5'
-											x='10'
-											y='50'
-											rx='5'
-											ry='5'
-											transform={rotate ? "rotate(-45  50 55)" : ""}
-										/>
-										{/* bottom rectangle */}
-										{!hideRectangle && (
-											<rect
-												className='fill-current'
-												width='80'
-												height='5'
-												x='10'
-												y='80'
-												rx='5'
-												ry='5'
-											/>
-										)}
-									</svg>
-								</button>
-								<AnimatePresence>
+								<div >
+									<FlyoutLink href='/' FlyoutContent={PortfolioLinks}>
+										<button>
+											<svg
+												viewBox='0 0 100 100'
+												className='w-9 h-9 items-center p-1'
+											>
+												{/* top rectangle */}
+												{!hideRectangle && (
+													<rect
+														className='fill-current rounded-lg'
+														width='80'
+														height='5'
+														x='10'
+														y='20'
+														rx='5'
+														ry='5'
+													/>
+												)}
+												{/* middle rectangles */}
+												<rect
+													className='fill-current transition-transform duration-300'
+													width='80'
+													height='5'
+													x='10'
+													y='50'
+													rx='5'
+													ry='5'
+													transform={rotate ? "rotate(45  50 55)" : ""}
+												/>
+												<rect
+													className='fill-current transition-transform duration-300'
+													width='80'
+													height='5'
+													x='10'
+													y='50'
+													rx='5'
+													ry='5'
+													transform={rotate ? "rotate(-45  50 55)" : ""}
+												/>
+												{/* bottom rectangle */}
+												{!hideRectangle && (
+													<rect
+														className='fill-current'
+														width='80'
+														height='5'
+														x='10'
+														y='80'
+														rx='5'
+														ry='5'
+													/>
+												)}
+											</svg>
+										</button>{" "}
+									</FlyoutLink>
+								</div>
+
+								{/* <AnimatePresence>
 									{isDropdownOpen && (
 										<motion.div
 											initial={{ opacity: 0, y: 15, height: "auto" }}
 											animate={{ opacity: 1, y: 0, height: "auto" }}
 											exit={{ opacity: 0, y: 15, height: 0 }}
 											transition={{ duration: 0.3, ease: "easeOut" }}
-											className='fixed top-[61px] left-0 w-full  bg-slate-100 transition-all duration-500 delay-100 z-50 uppercase md:absolute items-center md:h-full'
+											className='absolute top-[61px] left-0 w-full  bg-slate-100 transition-all duration-500 delay-100 z-50 uppercase md:absolute items-center md:h-full'
 										>
 											<HamburgerLinks2 isDropdownOpen={isDropdownOpen} />
 										</motion.div>
 									)}
-								</AnimatePresence>
+								</AnimatePresence> */}
 							</div>
 						</div>
 					</div>

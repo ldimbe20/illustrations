@@ -14,6 +14,7 @@ const AnimationLinks: React.FC<ImageCardProps> = ({ text, href, isHeader }) => {
 
 	const handleMouseEnter = () => {
 		setOpen(true);
+		console.log(open)
 	};
 
 	const handleMouseLeave = () => {

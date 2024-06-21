@@ -1,7 +1,7 @@
 /** @format */
 "use client";
 import React, { useEffect, useState } from "react";
-import { designTypes } from "./data";
+import { designTypes } from "./data_exports";
 import ImageGallery from "./_ui/imageGallery";
 
 const items = designTypes;
