@@ -28,7 +28,7 @@ const AnimationLinks: React.FC<ImageCardProps> = ({ text, href, isHeader }) => {
 					<h3
 						onMouseEnter={handleMouseEnter}
 						onMouseLeave={handleMouseLeave}
-						className={`relative text-black mr-5 md:ml-0 font-semibold z-50 block w-full py-2 px-4 transition-colors duration-300 ${
+						className={`relative text-black mr-5 md:ml-0 font-semibold text-base z-50 block w-full py-2 px-4 transition-colors duration-300 ${
 							open && "bg-slate-300"
 						}`}
 					>
@@ -40,7 +40,7 @@ const AnimationLinks: React.FC<ImageCardProps> = ({ text, href, isHeader }) => {
 					<h3
 						onMouseEnter={handleMouseEnter}
 						onMouseLeave={handleMouseLeave}
-						className={`relative text-black mr-5 md:ml-0  z-50 block w-full py-2 px-4 transition-colors duration-300 ${
+						className={`relative text-black mr-5 text-base md:ml-0 z-50 block w-full py-2 px-4 transition-colors duration-300 ${
 							open && "bg-slate-300"
 						}`}
 					>

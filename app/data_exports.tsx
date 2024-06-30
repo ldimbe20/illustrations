@@ -442,12 +442,12 @@ export const illustrationsTwo = [
 	},
 ]
 
-// Navigation links
+// Navigation links details
 
 export const Portfolio = () => {
 	return (
 		<div className='w-64 bg-slate-100 shadow-xl text-center'>
-			<div className='space-y-3 text-xl'>
+			<div>
 				<AnimationLinks
 					text='Graphic Design'
 					href='/graphics'
@@ -461,8 +461,8 @@ export const Portfolio = () => {
 				isHeader={false}
 			/>
 			<AnimationLinks text='J.Jill' href='/jjill' isHeader={false} />
-			<AnimationLinks text='Wildkin' href='/jjill' isHeader={false} />
-			<div className='text-xl'>
+			<AnimationLinks text='Wildkin' href='/wildkin' isHeader={false} />
+			<div>
 				<AnimationLinks
 					text='Illustrations'
 					href='/illustration'

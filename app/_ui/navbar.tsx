@@ -3,7 +3,6 @@
 import NavLinks from "./navlinks";
 import { useState } from "react";
 import FlyoutLink from "./flyoutLink";
-import AnimationLinks from "./animationLinks";
 import { Portfolio } from "../data_exports";
 
 

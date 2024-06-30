@@ -7,7 +7,6 @@ interface HamburgerLinksProps {
 	isDropdownOpen: boolean;
 }
 
-
 export default function HamburgerLinks2({
 	isDropdownOpen,
 }: HamburgerLinksProps) {
@@ -44,7 +43,7 @@ export default function HamburgerLinks2({
 						href='/jjill'
 						isHeader={false}
 					/>
-					<AnimationLinks text='Wildkin' href='/jjill' isHeader={false} />
+					<AnimationLinks text='Wildkin' href='/wildkin' isHeader={false} />
 					<AnimationLinks
 						text='Illustration'
 						href='/illustration'

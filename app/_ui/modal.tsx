@@ -2,7 +2,7 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 type ModalProps = {
 	clickedImg: string;
@@ -10,8 +10,16 @@ type ModalProps = {
 };
 
 const Modal: React.FC<ModalProps> = ({ clickedImg, setClickedImg }) => {
+	const [isOpen, setIsOpen] = useState(false);
+	const [isClosing, setIsClosing] = useState(false);
+
 	const handleClose = () => {
-		setClickedImg("");
+		setIsClosing(true);
+		setTimeout(() => {
+			setIsOpen(false);
+			setIsClosing(false);
+			setClickedImg("");
+		}, 700);
 	};
 
 	const handleOverlayClick = (
@@ -22,26 +30,39 @@ const Modal: React.FC<ModalProps> = ({ clickedImg, setClickedImg }) => {
 		}
 	};
 
-	if (!clickedImg) return null;
+	useEffect(() => {
+		if (clickedImg) {
+			setIsOpen(true);
+		}
+	}, [clickedImg]);
+
+	if (!clickedImg && !isClosing) return null;
 
 	return (
 		<div
-			className='fixed inset-0 flex items-center justify-center bg-white bg-opacity-75 z-50'
+			className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50 transition-opacity duration-700'}
+            ${isOpen && !isClosing ? "opacity-100" : "opacity-0"}`}
 			onClick={handleOverlayClick}
 		>
 			<div className='relative max-w-full max-h-full'>
 				<img
 					src={clickedImg}
 					alt='Enlarged'
-					className='max-w-full max-h-full'
+					className={`max-w-full max-h-full ${
+						isOpen && !isClosing
+							? "transform scale-100 opacity-100"
+							: "transform scale-50 opacity-0"
+					}`}
 					style={{ maxWidth: "80vw", maxHeight: "80vh" }}
 				/>
-				<button
-					onClick={handleClose}
-					className='absolute top-0 right-0 m-4 text-black'
-				>
-					<FontAwesomeIcon icon={faXmark} size='2x' />
-				</button>
+				{isOpen && !isClosing && (
+					<button
+						onClick={handleClose}
+						className='absolute top-0 right-0 m-4 text-slate-500 transition-opacity delay-700'
+					>
+						<FontAwesomeIcon icon={faXmark} size='1x' />
+					</button>
+				)}
 			</div>
 		</div>
 	);
