@@ -2,7 +2,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import ImageGallery from "../_ui/imageGallery";
-import { graphics } from "../data";
+import { graphics } from "../data_exports";
 
 const items = graphics;
 
@@ -16,12 +16,12 @@ export default function Graphics() {
 	return (
 		<div className='container flex flex-col items-center h-full pt-10 px-10 z-0'>
 			<div
-				className={`h-full py-10 text-center md:flex md:justify-between transition-opacity duration-700 ease-in-out ${
+				className={`h-full py-10 text-center md:flex md:justify-between transition-opacity duration-500 ease-in-out ${
 					loaded ? "opacity-100" : "opacity-0"
 				}`}
 			>
 				{" "}
-				<h3 className='text-black font-sans font-semibold text-2xl text-left'>
+				<h3 className='text-black font-sans font-semibold text-2xl text-left mb-5 md:mb-0'>
 					Graphic Design{" "}
 				</h3>
 				<p className='md:w-1/2 text-left'>

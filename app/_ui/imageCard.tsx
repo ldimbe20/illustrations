@@ -46,14 +46,23 @@ const ImageCard: React.FC<ImageCardProps> = ({
 					onMouseEnter={() => setIsHovered(true)}
 					onMouseLeave={() => setIsHovered(false)}
 				>
-					<Image src={image} alt={alt} width={416} height={600} />
-					{isHovered && (
-						<div className='inset-0 bg-white bg-opacity-50 flex items-center justify-center z-0'>
-							<span className='text-black font-sans font-semibold text-xl'>
-								{text}
-							</span>
+					<div className='relative'>
+						<div className='group relative overflow-hidden'>
+							<Image
+								src={image}
+								alt={alt}
+								width={416}
+								height={600}
+								className='transition-transform duration-300 ease-in-out transform group-hover:scale-110'
+							/>
+							{isHovered && (
+								<div className='absolute inset-0 flex items-center justify-center'></div>
+							)}
 						</div>
-					)}
+						<h4 className='text-black font-sans font-medium text-xl text-center mt-3 mb-5'>
+							{text}
+						</h4>
+					</div>
 				</div>
 			) : (
 				<Link
@@ -65,14 +74,23 @@ const ImageCard: React.FC<ImageCardProps> = ({
 					onMouseLeave={() => setIsHovered(false)}
 					onClick={() => handleClick(image)}
 				>
-					<Image src={image} alt={alt} width={416} height={600} />
-					{isHovered && (
-						<div className='absolute inset-0 bg-white bg-opacity-50 flex items-center justify-center'>
-							<span className='text-black font-sans font-semibold text-xl'>
-								{text}
-							</span>
+					<div className='relative'>
+						<div className='group relative overflow-hidden'>
+							<Image
+								src={image}
+								alt={alt}
+								width={416}
+								height={600}
+								className='transition-transform duration-300 ease-in-out transform group-hover:scale-110'
+							/>
+							{isHovered && (
+								<div className='absolute inset-0 flex items-center justify-center'></div>
+							)}
 						</div>
-					)}
+						<h4 className='text-black font-sans font-medium text-xl text-center mt-3 mb-5'>
+							{text}
+						</h4>
+					</div>
 				</Link>
 			)}
 			{usesModal && clickedImg && (

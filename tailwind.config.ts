@@ -1,3 +1,5 @@
+/** @format */
+
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -19,15 +21,19 @@ const config: Config = {
 			},
 			keyframes: {
 				fadeIn: {
-					"0%": { opacity: '0' },
-					"100%": { opacity: '1' },
+					"0%": { opacity: "0" },
+					"100%": { opacity: "1" },
 				},
 			},
 			animation: {
 				fadeIn: "fadeIn 1s ease-in-out",
 			},
+			spacing: {
+				"15": "60px",
+			},
 		},
 	},
 	plugins: [],
 };
+
 export default config;

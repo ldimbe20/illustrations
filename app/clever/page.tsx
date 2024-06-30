@@ -2,7 +2,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import ImageGallery from "../_ui/imageGallery";
-import { clever } from "../data";
+import { clever } from "../data_exports";
 
 const items = clever;
 
@@ -21,7 +21,7 @@ export default function Clever() {
 						loaded ? "opacity-100" : "opacity-0"
 					}`}
 				>
-					<h3 className='text-black font-sans font-semibold text-2xl text-left'>
+					<h3 className='text-black font-sans font-semibold text-2xl text-left mb-5 md:mb-0'>
 						The Clever Factory
 					</h3>
 					<p className='md:w-1/2 text-left'>
@@ -32,7 +32,7 @@ export default function Clever() {
 						Clever Factory.
 					</p>
 				</div>
-				<ImageGallery items={items}/>
+				<ImageGallery items={items} />
 			</div>
 			;
 		</>

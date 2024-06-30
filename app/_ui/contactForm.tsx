@@ -5,8 +5,6 @@ import { AiOutlineMail } from "react-icons/ai";
 import { IoPersonSharp } from "react-icons/io5";
 import { TbMessageCircle2Filled } from "react-icons/tb";
 
-
-
 const ContactForm = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
@@ -113,11 +111,11 @@ const ContactForm = () => {
 							onChange={(e) => setName(e.target.value)}
 							onBlur={() => handleBlur("name")}
 							required
-							className='peer pl-10 text-slate-900 placeholder-slate-400 text-sm rounded-none transition-all duration-700 ease-in-out focus:border-b-2 outline-none block w-full p-2.5 border-b-2 border-transparent focus:border-slate-500 focus:border-l-0'
+							className='peer pl-10 text-slate-600 placeholder-slate-400 text-sm rounded-none transition-all duration-700 ease-in-out focus:border-b-2 outline-none block w-full p-2.5 border-b-2 border-transparent focus:border-slate-500 focus:border-l-0'
 						/>
 					</div>
 					{touched.name && !name && (
-						<p className='mt-2 font-medium text-slate-900 italic text-sm transition-all duration-700 ease-in-out'>
+						<p className='mt-2 font-medium text-slate-600 italic text-sm transition-all duration-700 ease-in-out'>
 							Name is required.
 						</p>
 					)}
@@ -133,11 +131,11 @@ const ContactForm = () => {
 							onChange={(e) => setEmail(e.target.value)}
 							onBlur={() => handleBlur("email")}
 							required
-							className='peer pl-10 text-slate-900 placeholder-slate-400 text-sm rounded-none transition-all duration-700 ease-in-out focus:border-b-2 outline-none block w-full p-2.5 border-b-2 border-transparent focus:border-slate-500 focus:border-l-0'
+							className='peer pl-10 text-slate-600 placeholder-slate-400 text-sm rounded-none transition-all duration-700 ease-in-out focus:border-b-2 outline-none block w-full p-2.5 border-b-2 border-transparent focus:border-slate-500 focus:border-l-0'
 						/>
 					</div>
 					{touched.email && getEmailError() && (
-						<p className='mt-2 font-medium italic text-slate-900 text-sm transition-all duration-700 ease-in-out'>
+						<p className='mt-2 font-medium italic text-slate-600 text-sm transition-all duration-700 ease-in-out'>
 							{getEmailError()}
 						</p>
 					)}
@@ -153,18 +151,18 @@ const ContactForm = () => {
 							onChange={(e) => setMessage(e.target.value)}
 							onBlur={() => handleBlur("message")}
 							required
-							className='peer pl-10 text-slate-900 placeholder-slate-400 text-sm rounded-none transition-all duration-700 ease-in-out focus:border-b-2 outline-none block w-full p-2.5 border-b-2 border-transparent focus:border-slate-500 focus:border-l-0'
+							className='peer pl-10 text-slate-600 placeholder-slate-400 text-sm rounded-none transition-all duration-700 ease-in-out focus:border-b-2 outline-none block w-full p-2.5 border-b-2 border-transparent focus:border-slate-500 focus:border-l-0'
 						/>
 					</div>
 					{touched.message && !message && (
-						<p className='mt-2 font-medium italic text-slate-900 text-sm transition-all duration-700 ease-in-out'>
+						<p className='mt-2 font-medium italic text-slate-600 text-sm transition-all duration-700 ease-in-out'>
 							Message is required.
 						</p>
 					)}
 				</div>
 				<div className='flex justify-center'>
 					<button
-						className={`bg-slate-900 border-2 border-slate-100 text-white font-bold py-2 px-4 rounded-none transition-all duration-700 ease-in-out ${
+						className={`bg-slate-600 border-2 border-slate-100 text-white font-bold py-2 px-4 rounded-none transition-all duration-700 ease-in-out ${
 							!enableButton
 								? "opacity-50 cursor-not-allowed"
 								: "hover:bg-white hover:text-slate-900 hover:border-slate-900"
