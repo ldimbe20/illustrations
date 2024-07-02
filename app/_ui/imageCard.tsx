@@ -27,7 +27,12 @@ const ImageCard: React.FC<ImageCardProps> = ({
 
 	const handleClick = (item: string) => {
 		setClickedImg(item);
+		// when this event is triggered I want something to be passed to parent
 	};
+
+	const changeOpacity = (item: string) =>{
+		
+	}
 
 	useEffect(() => {
 		// Set the isLoaded state to true after a short delay to trigger the animation
@@ -43,8 +48,6 @@ const ImageCard: React.FC<ImageCardProps> = ({
 						isLoaded ? "opacity-100" : "opacity-0"
 					}`}
 					onClick={() => handleClick(image)}
-					onMouseEnter={() => setIsHovered(true)}
-					onMouseLeave={() => setIsHovered(false)}
 				>
 					<div className='relative'>
 						<div className='group relative overflow-hidden'>
