@@ -9,6 +9,8 @@ type ModalProps = {
 	setClickedImg: React.Dispatch<React.SetStateAction<string>>;
 };
 
+
+
 const Modal: React.FC<ModalProps> = ({ clickedImg, setClickedImg }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isClosing, setIsClosing] = useState(false);

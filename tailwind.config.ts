@@ -30,6 +30,8 @@ const config: Config = {
 			},
 			spacing: {
 				"15": "60px",
+				"0.25": "0.0625rem", // 1/16th of a rem (1px)
+				"0.375": "0.09375rem",
 			},
 		},
 	},

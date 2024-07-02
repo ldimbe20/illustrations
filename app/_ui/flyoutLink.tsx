@@ -36,7 +36,7 @@ const FlyoutLink: React.FC<FlyoutLinkProps> = ({
 					style={{
 						transform: open ? "scaleX(1)" : "scaleX(0)",
 					}}
-					className='absolute -bottom-2 -left-2 -right-2 h-0.5 origin-left scale-x-0 rounded-full bg-slate-500 transition-transform duration-300 ease-out'
+					className='absolute -bottom-2 mb-1 -left-2 -right-2 h-0.375 origin-left scale-x-0 rounded-full bg-slate-500 transition-transform duration-300 ease-out'
 				/>
 			</a>
 			<AnimatePresence>

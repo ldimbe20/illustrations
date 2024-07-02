@@ -22,16 +22,16 @@ export default function Navbar() {
 
 	return (
 		<>
-			<div className='w-full h-15 py-3 sticky bg-slate-100 border-b-4 border-slate-500 z-50'>
-				<div className='flex justify-between items-center ml-2 md:mr-2'>
+			<div className='w-full h-12 py-3 fixed items-center bg-slate-100 border-b-2 border-slate-500 z-50'>
+				<div className='flex justify-between ml-2 md:mr-2'>
 					{/* regular menu to display on larger screens*/}
-					<div className='hidden md:flex justify-between md:items-center md:w-full'>
+					<div className='hidden justify-between md:flex md:items-center md:w-full'>
 						<div className='md:flex md:items-center'>
-							<h2 className='text-black font-sans font-semibold text-2xl'>
+							<h2 className='text-black font-sans font-semibold text-xl'>
 								Lauren Dimberg
 							</h2>
 						</div>
-						<div className='ml-auto uppercase text-l md:flex md:items-center md:mx-0'>
+						<div className='ml-auto text-l md:flex md:items-center md:mx-0'>
 							<NavLinks />
 						</div>
 					</div>
@@ -43,7 +43,7 @@ export default function Navbar() {
 								onMouseEnter={toggleDropdown}
 								onMouseLeave={toggleDropdown}
 							>
-								<div >
+								<div>
 									<FlyoutLink href='/' FlyoutContent={PortfolioLinks}>
 										<button>
 											<svg
