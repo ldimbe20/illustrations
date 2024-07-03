@@ -7,8 +7,7 @@ import type { Metadata } from "next";
 import { Crimson_Pro, Raleway } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_ui/navbar";
-import OpacityChange from "./_ui/opacityChange";
-import Modal from "./_ui/modal";
+import Footer from "./_ui/footer";
 
 const crimsonPro = Crimson_Pro({ subsets: ["latin"] });
 const raleway = Raleway({ subsets: ["latin"] });
@@ -37,6 +36,7 @@ export default function RootLayout({
 			<body className='m-0 p-0'>
 				<Navbar />
 				<div className='flex justify-center items-center'>{children}</div>
+				<Footer />
 			</body>
 		</html>
 	);
