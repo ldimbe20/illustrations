@@ -4,57 +4,57 @@ import React, { ReactNode, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 type FlyoutLinkProps = {
-	children: ReactNode;
-	href: string;
-	FlyoutContent?: React.ComponentType<any>;
+  children: ReactNode;
+  href: string;
+  FlyoutContent?: React.ComponentType<any>;
 };
 
 const FlyoutLink: React.FC<FlyoutLinkProps> = ({
-	children,
-	href,
-	FlyoutContent,
+  children,
+  href,
+  FlyoutContent,
 }) => {
-	const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
-	const handleMouseEnter = () => {
-		setOpen(true);
-	};
+  const handleMouseEnter = () => {
+    setOpen(true);
+  };
 
-	const handleMouseLeave = () => {
-		setOpen(false);
-	};
+  const handleMouseLeave = () => {
+    setOpen(false);
+  };
 
-	return (
-		<div
-			onMouseEnter={handleMouseEnter}
-			onMouseLeave={handleMouseLeave}
-			className='relative'
-		>
-			<a href={href} className='relative text-black mr-5'>
-				{children}
-				<span
-					style={{
-						transform: open ? "scaleX(1)" : "scaleX(0)",
-					}}
-					className='absolute -bottom-2 mb-1 -left-2 -right-2 h-0.375 origin-left scale-x-0 rounded-full bg-slate-500 transition-transform duration-300 ease-out'
-				/>
-			</a>
-			<AnimatePresence>
-				{open && FlyoutContent && (
-					<motion.div
-						initial={{ opacity: 0, y: 15 }}
-						animate={{ opacity: 1, y: 0 }}
-						exit={{ opacity: 0, y: 15 }}
-						style={{ translateX: "-50%" }}
-						transition={{ duration: 0.3, ease: "easeOut" }}
-						className='absolute top-12 left-0 w-full md:w-auto md:left-1/2 md:top-11 bg-white text-black'
-					>
-						<FlyoutContent />
-					</motion.div>
-				)}
-			</AnimatePresence>
-		</div>
-	);
+  return (
+    <div
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className="relative"
+    >
+      <a href={href} className="relative mr-5 text-black">
+        {children}
+        <span
+          style={{
+            transform: open ? "scaleX(1)" : "scaleX(0)",
+          }}
+          className="md:absolute md:-bottom-2 md:-left-2 md:-right-2 md:mb-1 md:h-0.375 md:origin-left md:scale-x-0 md:rounded-full md:bg-slate-500 md:transition-transform md:duration-300 md:ease-out"
+        />
+      </a>
+      <AnimatePresence>
+        {open && FlyoutContent && (
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 15 }}
+            style={{ translateX: "-50%" }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="absolute left-0 top-11 w-full bg-white text-black md:left-1/2 md:top-9 md:w-auto"
+          >
+            <FlyoutContent />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
 };
 
 export default FlyoutLink;
