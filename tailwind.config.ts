@@ -1,5 +1,6 @@
 /** @format */
 
+import { Raleway } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -17,7 +18,6 @@ const config: Config = {
 			},
 			fontFamily: {
 				sans: ["Raleway", "sans-serif"],
-				serif: ['"Crimson Pro"', "serif"],
 			},
 			keyframes: {
 				fadeIn: {

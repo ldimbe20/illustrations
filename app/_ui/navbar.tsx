@@ -24,7 +24,7 @@ export default function Navbar() {
           {/* regular menu to display on larger screens*/}
           <div className="hidden md:flex md:w-full md:items-center md:justify-between">
             <div className="md:flex md:items-center">
-              <h2 className="font-sans text-xl font-semibold text-black">
+              <h2 className="font-sans text-xl text-black">
                 Lauren Dimberg
               </h2>
             </div>
