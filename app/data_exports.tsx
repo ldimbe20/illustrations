@@ -446,29 +446,31 @@ export const illustrationsTwo = [
 
 export const Portfolio = () => {
 	return (
-		<div className='w-64 bg-slate-100 shadow-xl text-center'>
-			<div>
-				<AnimationLinks
-					text='Graphic Design'
-					href='/graphics'
-					isHeader={true}
-				/>
-			</div>
-			<AnimationLinks text='C.R Gibson' href='/gibson' isHeader={false} />
-			<AnimationLinks
-				text='The Clever Factory'
-				href='/clever'
-				isHeader={false}
-			/>
-			<AnimationLinks text='J.Jill' href='/jjill' isHeader={false} />
-			<AnimationLinks text='Wildkin' href='/wildkin' isHeader={false} />
-			<div>
-				<AnimationLinks
-					text='Illustrations'
-					href='/illustration'
-					isHeader={true}
-				/>
-			</div>
-		</div>
-	);
+    <div className="w-64 bg-slate-100 text-center shadow-xl">
+      <div>
+        <AnimationLinks
+          text="Graphic Design"
+          href="/graphics"
+          isHeader={true}
+        />
+      </div>
+      <AnimationLinks text="Block Aero Technologies" href="/block" isHeader={false} />
+
+      <AnimationLinks text="C.R Gibson" href="/gibson" isHeader={false} />
+      <AnimationLinks
+        text="The Clever Factory"
+        href="/clever"
+        isHeader={false}
+      />
+      <AnimationLinks text="J.Jill" href="/jjill" isHeader={false} />
+      <AnimationLinks text="Wildkin" href="/wildkin" isHeader={false} />
+      <div>
+        <AnimationLinks
+          text="Illustrations"
+          href="/illustration"
+          isHeader={true}
+        />
+      </div>
+    </div>
+  );
 };
