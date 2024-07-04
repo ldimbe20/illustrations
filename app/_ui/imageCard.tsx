@@ -30,7 +30,6 @@ const ImageCard: React.FC<ImageCardProps> = ({
     // when this event is triggered I want something to be passed to parent
   };
 
-  const changeOpacity = (item: string) => {};
 
   useEffect(() => {
     // Set the isLoaded state to true after a short delay to trigger the animation

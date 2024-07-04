@@ -17,7 +17,6 @@ const PageLayout: React.FC<PageLayoutProps> = ({
   description,
   items,
   itemsTwo,
-  isContactPage,
 }) => {
   const [loaded, setLoaded] = useState(false);
 

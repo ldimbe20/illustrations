@@ -14,3 +14,5 @@ export default function Freelance() {
 		</div>
 	);
 }
+
+// Fix if you end up using

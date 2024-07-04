@@ -7,7 +7,7 @@ import { Portfolio } from "../data_exports";
 
 const PortfolioLinks = Portfolio;
 
-export default function Navbar() {
+const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [rotate, setRotate] = useState(false);
   const [hideRectangle, setHideRectangle] = useState(false);
@@ -100,3 +100,5 @@ export default function Navbar() {
     </>
   );
 }
+
+export default Navbar;
