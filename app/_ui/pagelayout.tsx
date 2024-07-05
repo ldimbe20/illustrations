@@ -41,7 +41,6 @@ const PageLayout: React.FC<PageLayoutProps> = ({
         <ImageGallery items={items}/>
         {itemsTwo ? <ImageGallery items={itemsTwo} /> : ""}
       </div>
-      ;
     </>
   );
 };

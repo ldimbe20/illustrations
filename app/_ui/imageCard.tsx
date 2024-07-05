@@ -30,7 +30,6 @@ const ImageCard: React.FC<ImageCardProps> = ({
     // when this event is triggered I want something to be passed to parent
   };
 
-
   useEffect(() => {
     // Set the isLoaded state to true after a short delay to trigger the animation
     const timer = setTimeout(() => setIsLoaded(true), 100);
@@ -59,9 +58,9 @@ const ImageCard: React.FC<ImageCardProps> = ({
                 <div className="absolute inset-0 flex items-center justify-center"></div>
               )}
             </div>
-            <h4 className="mb-5 mt-3 text-center font-sans text-xl font-medium text-black">
+            {/* <p className="mb-5 mt-3 text-center font-sans text-sm font-medium text-black">
               {text}
-            </h4>
+            </p> */}
           </div>
         </div>
       ) : (
@@ -87,7 +86,7 @@ const ImageCard: React.FC<ImageCardProps> = ({
                 <div className="absolute inset-0 flex items-center justify-center"></div>
               )}
             </div>
-            <h4 className="mb-5 mt-3 text-center font-sans text-xl font-medium text-black">
+            <h4 className="mb-5 mt-3 text-center font-sans text-sm font-medium text-black">
               {text}
             </h4>
           </div>

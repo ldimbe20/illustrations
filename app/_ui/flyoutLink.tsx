@@ -47,7 +47,7 @@ const FlyoutLink: React.FC<FlyoutLinkProps> = ({
             exit={{ opacity: 0, y: 15 }}
             style={{ translateX: "-50%" }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="absolute left-0 top-11 w-full bg-white text-black md:left-1/2 md:top-9 md:w-auto"
+            className="absolute left-0 top-11 w-full bg-white text-black md:left-1/2 md:top-8.5 md:w-auto"
           >
             <FlyoutContent />
           </motion.div>

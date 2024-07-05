@@ -9,7 +9,7 @@ import Navbar from "./_ui/navbar";
 import Footer from "./_ui/footer";
 
 export const metadata: Metadata = {
-  title: "Lauren Portfolio",
+  title: "Lauren Dimberg | Designer",
   description: "Portfolio of my work",
 };
 
