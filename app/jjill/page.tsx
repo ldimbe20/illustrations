@@ -1,10 +1,9 @@
 /** @format */
 "use client";
-import { jjill, jjillSingle } from "../data_exports";
+import { jjill, } from "../data_exports";
 import PageLayout from "../_ui/pagelayout";
 
 const items = jjill;
-const itemsTwo = jjillSingle;
 
 const JJill = () => {
   const projectHeader = "J.Jill";
@@ -18,7 +17,6 @@ const JJill = () => {
       projectHeader={projectHeader}
       description={description}
       items={items}
-      itemsTwo={itemsTwo}
     />
   );
 };

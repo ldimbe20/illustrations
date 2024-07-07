@@ -6,19 +6,9 @@ type ImageGalleryProps = {
 };
 
 const ImageGallery: React.FC<ImageGalleryProps> = ({ items }) => {
-  const itemsCount = items.length;
-  const gridColsClass =
-    itemsCount % 3 === 1
-      ? "lg:grid-cols-1"
-      : itemsCount % 3 === 2
-        ? "lg:grid-cols-2"
-        : "lg:grid-cols-3";
-
   return (
     <div className="flex justify-center">
-      <div
-        className={`grid grid-cols-1 py-10 md:grid-cols-2 ${gridColsClass} z-0 gap-4`}
-      >
+      <div className={`z-0 w-full max-w-5xl md:columns-2 lg:columns-3`}>
         {items.map((item, index) => (
           <ImageCard
             key={index}

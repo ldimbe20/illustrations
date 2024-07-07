@@ -1,9 +1,8 @@
 "use client";
 import PageLayout from "../_ui/pagelayout";
-import { illustrations, illustrationsTwo } from "../data_exports";
+import { illustrations } from "../data_exports";
 
 const items = illustrations;
-const itemsTwo = illustrationsTwo;
 
 const Illustrations = () => {
   const projectHeader = "Illustrations";
@@ -16,7 +15,6 @@ const Illustrations = () => {
       projectHeader={projectHeader}
       description={description}
       items={items}
-      itemsTwo={itemsTwo}
     />
   );
 };

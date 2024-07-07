@@ -2,13 +2,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import ImageGallery from "../_ui/imageGallery";
-import Contact from "../contact/page";
 
 type PageLayoutProps = {
   projectHeader: string;
   description: string;
   items?: any;
-  itemsTwo?: any;
   isContactPage?: boolean;
 };
 
@@ -16,7 +14,6 @@ const PageLayout: React.FC<PageLayoutProps> = ({
   projectHeader,
   description,
   items,
-  itemsTwo,
 }) => {
   const [loaded, setLoaded] = useState(false);
 
@@ -39,7 +36,6 @@ const PageLayout: React.FC<PageLayoutProps> = ({
           <p className="mt-5 text-center text-sm">{description}</p>
         </div>
         <ImageGallery items={items}/>
-        {itemsTwo ? <ImageGallery items={itemsTwo} /> : ""}
       </div>
     </>
   );
