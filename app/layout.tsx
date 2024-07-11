@@ -29,9 +29,9 @@ export default function RootLayout({
           sizes="<generated>"
         />
       </head>
-      <body className="m-0 p-0">
+      <body className="m-0 p-0 flex flex-col min-h-screen">
         <Navbar />
-        <div className="flex items-center justify-center">{children}</div>
+        <div className="flex flex-grow items-center justify-center">{children}</div>
         <Footer />
       </body>
     </html>
