@@ -21,7 +21,6 @@ const PageLayout: React.FC<PageLayoutProps> = ({
     setLoaded(true);
   }, []);
 
- 
   return (
     <>
       <div className="container flex h-full flex-col items-center px-10 pt-10">
@@ -35,7 +34,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
           </h3>
           <p className="mt-5 text-center text-sm">{description}</p>
         </div>
-        <ImageGallery items={items}/>
+        <ImageGallery items={items} />
       </div>
     </>
   );
