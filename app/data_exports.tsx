@@ -32,7 +32,8 @@ export const graphics = [
     alt: "Instagram ad for Block Aero an aviation company",
     link: "/block",
     text: "Block Aero Technologies",
-    usesModal: false,  },
+    usesModal: false,
+  },
   {
     image: "/portfolio/main/cr-main.jpg",
     alt: "Baby shower book",
@@ -92,19 +93,22 @@ export const block = [
     alt: "Instagram ad for Block Aero an aviation company",
     link: "/block",
     text: "Flyer created for Singapore Airshow",
-    usesModal: true,  },
+    usesModal: true,
+  },
   {
     image: "/portfolio/block/instagram.jpg",
     alt: "Instagram ad for Block Aero an aviation company",
     link: "/block",
     text: "Flyer created for China Parts Airshow",
-    usesModal: true,  },
+    usesModal: true,
+  },
   {
     image: "/portfolio/block/linkedIn.jpg",
     alt: "LinkedIn ad for Block Aero an aviation company",
     link: "/block",
     text: "LinkedIn post",
-    usesModal: true,  },
+    usesModal: true,
+  },
 ];
 
 export const gibson = [
@@ -229,8 +233,6 @@ export const jjill = [
   },
 ];
 
-
-
 export const wildkin = [
   {
     alt: "Wildkin Poster",
@@ -265,7 +267,8 @@ export const wildkin = [
     link: "",
     image: "/portfolio/wildkin/wildkin_tp.jpg",
     text: "Wildkin Poster",
-    usesModal: true,  },
+    usesModal: true,
+  },
 ];
 // All Illustrations
 
@@ -394,7 +397,7 @@ export const development = [
     alt: "Deepweave image",
     link: "",
     image: "/portfolio/development/FoodFinder.jpg",
-    text: "Deepweave",
+    text: "DeepWeave",
     usesModal: false,
   },
   {
@@ -422,13 +425,12 @@ export const allLogos = [
   "/portfolio/logos/github.png",
   "/portfolio/logos/html.png",
   "/portfolio/logos/javascript.png",
-  "/portfolio/logos/link.png",
+  "/portfolio/logos/next.png",
   "/portfolio/logos/python.png",
   "/portfolio/logos/react.png",
   "/portfolio/logos/remix.png",
   "/portfolio/logos/squarespace.png",
   "/portfolio/logos/tailwind.png",
-  "/portfolio/logos/next.png",
 ];
 
 // Navigation links details
