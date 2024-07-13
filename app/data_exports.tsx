@@ -412,6 +412,24 @@ export const development = [
     usesModal: false,
   },
 ];
+// Logos for Development
+
+export const allLogos = [
+  "/portfolio/logos/angular.png",
+  "/portfolio/logos/bootstrap.png",
+  "/portfolio/logos/css.png",
+  "/portfolio/logos/django.png",
+  "/portfolio/logos/github.png",
+  "/portfolio/logos/html.png",
+  "/portfolio/logos/javascript.png",
+  "/portfolio/logos/link.png",
+  "/portfolio/logos/python.png",
+  "/portfolio/logos/react.png",
+  "/portfolio/logos/remix.png",
+  "/portfolio/logos/squarespace.png",
+  "/portfolio/logos/tailwind.png",
+  "/portfolio/logos/next.png",
+];
 
 // Navigation links details
 

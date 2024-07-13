@@ -1,8 +1,9 @@
 "use client";
 import PageLayout from "../_ui/pagelayout";
-import { development } from "../data_exports";
+import { allLogos, development } from "../data_exports";
 
 const items = development;
+const logos = allLogos;
 
 const Development = () => {
   const projectHeader = "Development";
@@ -12,7 +13,7 @@ const Development = () => {
       projectHeader={projectHeader}
       description={description}
       items={items}
-      
+      logos={logos}
     />
   );
 };
