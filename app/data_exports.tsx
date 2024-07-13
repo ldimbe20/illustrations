@@ -11,7 +11,7 @@ export const designTypes = [
     usesModal: false,
   },
   {
-    image: "/portfolio/main/vines.jpg",
+    image: "/portfolio/main/butterfly-main.jpg",
     alt: "Butterfly illustration",
     link: "/illustration",
     text: "Illustration",
@@ -387,6 +387,32 @@ export const illustrations = [
   },
 ];
 
+// Development projects
+
+export const development = [
+  {
+    alt: "Deepweave image",
+    link: "",
+    image: "/portfolio/development/FoodFinder.jpg",
+    text: "Deepweave",
+    usesModal: false,
+  },
+  {
+    alt: "Food Finder image",
+    link: "",
+    image: "/portfolio/development/FoodFinder.jpg",
+    text: "Food Finder",
+    usesModal: false,
+  },
+  {
+    alt: "Sketchbook image",
+    link: "",
+    image: "/portfolio/development/Sketchbook.jpg",
+    text: "Sketch Book",
+    usesModal: false,
+  },
+];
+
 // Navigation links details
 
 export const Portfolio = () => {
@@ -417,6 +443,11 @@ export const Portfolio = () => {
         <AnimationLinks
           text="Illustrations"
           href="/illustration"
+          isHeader={true}
+        />
+        <AnimationLinks
+          text="Development"
+          href="/development"
           isHeader={true}
         />
       </div>

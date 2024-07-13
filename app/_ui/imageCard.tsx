@@ -11,7 +11,8 @@ export type ImageCardProps = {
   link: string;
   text: string;
   usesModal: boolean;
-  // certain galleries use the modal while others do not
+  // If the gallery is a project type -development, illustration, graphic design
+  //  - useModal is false because they use links if it displays images for a specific project it uses modals
 };
 
 const ImageCard: React.FC<ImageCardProps> = ({
@@ -85,6 +86,7 @@ const ImageCard: React.FC<ImageCardProps> = ({
                   <div className="absolute inset-0 flex items-center justify-center"></div>
                 )}
               </div>
+              <h5 className="mt-2 text-center font-medium">{text}</h5>
             </div>
           </Link>
         </div>

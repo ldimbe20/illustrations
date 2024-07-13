@@ -1,16 +1,20 @@
-/** @format */
 "use client";
-import React from "react";
-import ImageGallery from "../_ui/imageGallery";
-import { designTypes } from "../data_exports";
+import PageLayout from "../_ui/pagelayout";
+import { development } from "../data_exports";
 
-const items = designTypes;
+const items = development;
 
-export default function Development() {
-	return (
-		<div className='container flex flex-col items-center h-full pt-10 sm:px-10rem'>
-			<h3 className='mb-4 text-xl py-10'>Development</h3>
-			<ImageGallery items={items} />
-		</div>
-	);
-}
+const Development = () => {
+  const projectHeader = "Development";
+  const description = `Add description.`;
+  return (
+    <PageLayout
+      projectHeader={projectHeader}
+      description={description}
+      items={items}
+      
+    />
+  );
+};
+
+export default Development;
