@@ -48,12 +48,12 @@ const PageLayout: React.FC<PageLayoutProps> = ({
                 }`}
               >
                 {logos.map((logoItem, index) => (
-                  <div key={index} className="p-2">
+                  <div key={index} className="p-2 mb-5">
                     <Image
                       src={logoItem}
                       width={50}
                       height={50}
-                      className=" ml-5 transform transition-transform duration-300 ease-in-out group-hover:scale-110"
+                      className="transform transition-transform duration-300 ease-in-out group-hover:scale-110"
                       alt="logo"
                     />
                   </div>

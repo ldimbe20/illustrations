@@ -395,21 +395,21 @@ export const illustrations = [
 export const development = [
   {
     alt: "Deepweave image",
-    link: "",
-    image: "/portfolio/development/FoodFinder.jpg",
+    link: "https://deepweave.com/",
+    image: "/portfolio/development/deepweave.jpg",
     text: "DeepWeave",
     usesModal: false,
   },
   {
     alt: "Food Finder image",
-    link: "",
+    link: "https://github.com/ldimbe20/Food-Finder",
     image: "/portfolio/development/FoodFinder.jpg",
     text: "Food Finder",
     usesModal: false,
   },
   {
     alt: "Sketchbook image",
-    link: "",
+    link: "https://github.com/ldimbe20/Sketchbook-server",
     image: "/portfolio/development/Sketchbook.jpg",
     text: "Sketch Book",
     usesModal: false,
@@ -430,6 +430,8 @@ export const allLogos = [
   "/portfolio/logos/react.png",
   "/portfolio/logos/remix.png",
   "/portfolio/logos/squarespace.png",
+  "/portfolio/logos/figma.png",
+  "/portfolio/logos/cypress.png",
   "/portfolio/logos/tailwind.png",
 ];
 
