@@ -1,6 +1,7 @@
 /** @format */
 
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode, useState, useEffect } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 
 type FlyoutLinkProps = {
@@ -15,6 +16,8 @@ const FlyoutLink: React.FC<FlyoutLinkProps> = ({
   FlyoutContent,
 }) => {
   const [open, setOpen] = useState(false);
+  const router = usePathname();
+  const isCurrentPage = router === href;
 
   const handleMouseEnter = () => {
     setOpen(true);
@@ -30,7 +33,7 @@ const FlyoutLink: React.FC<FlyoutLinkProps> = ({
       onMouseLeave={handleMouseLeave}
       className="relative"
     >
-      <a href={href} className="relative mr-5 text-black">
+      <a href={href} className={`relative mr-5 ${isCurrentPage ? "text-slate-600 font-semibold ": "text-black"}`}>
         {children}
         <span
           style={{

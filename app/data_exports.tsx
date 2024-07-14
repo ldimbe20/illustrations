@@ -18,8 +18,8 @@ export const designTypes = [
     usesModal: false,
   },
   {
-    image: "/portfolio/main/butterfly-main.jpg",
-    alt: "Artstore art project",
+    image: "/portfolio/development/deepweave.jpg",
+    alt: "Development project",
     link: "/development",
     text: "Development",
     usesModal: false,
