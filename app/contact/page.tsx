@@ -19,7 +19,7 @@ export default function ContactPage() {
           }`}
         >
           <h3 className="mb-3 text-center font-sans text-xl text-slate-600 md:mb-0">
-            Let's Talk
+            Let&apos;s Talk
           </h3>
           <ContactForm />
         </div>
