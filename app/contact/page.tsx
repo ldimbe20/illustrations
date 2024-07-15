@@ -18,7 +18,7 @@ export default function ContactPage() {
             loaded ? "opacity-100" : "opacity-0"
           }`}
         >
-          <h3 className="mb-3 text-center font-sans text-xl text-black md:mb-0">
+          <h3 className="mb-3 text-center font-sans text-xl text-slate-600 md:mb-0">
             Let's Talk
           </h3>
           <ContactForm />

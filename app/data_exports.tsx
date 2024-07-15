@@ -62,13 +62,13 @@ export const graphics = [
     text: "Wildkin",
     usesModal: false,
   },
-  {
-    image: "/portfolio/cr/witch_book.jpg",
-    alt: "Freelance book",
-    link: "/freelance",
-    text: "Freelance Projects",
-    usesModal: false,
-  },
+  // {
+  //   image: "/portfolio/cr/witch_book.jpg",
+  //   alt: "Freelance book",
+  //   link: "/freelance",
+  //   text: "Freelance Projects",
+  //   usesModal: false,
+  // },
 ];
 
 // Different graphic projects based on customer
@@ -288,6 +288,13 @@ export const illustrations = [
     usesModal: true,
   },
   {
+    alt: "Illustration of cat",
+    link: "",
+    image: "/portfolio/art/cat.jpg",
+    text: "Mykonos",
+    usesModal: true,
+  },
+  {
     alt: "Curled up fox",
     link: "",
     image: "/portfolio/art/fox.jpg",
@@ -323,6 +330,13 @@ export const illustrations = [
     usesModal: true,
   },
   {
+    alt: "Illustration of woman",
+    link: "",
+    image: "/portfolio/art/blue_lady.jpg",
+    text: "Mykonos",
+    usesModal: true,
+  },
+  {
     alt: "Illustration of divbars",
     link: "",
     image: "/portfolio/art/div_bar.jpg",
@@ -330,17 +344,23 @@ export const illustrations = [
     usesModal: true,
   },
   {
+    alt: "Illustration of snacks",
+    link: "",
+    image: "/portfolio/art/snacks.jpg",
+    text: "Dive Bar",
+    usesModal: true,
+  },
+  {
+    alt: "Illustration of desserts",
+    link: "",
+    image: "/portfolio/art/dessert.jpg",
+    text: "Dive Bar",
+    usesModal: true,
+  },
+  {
     alt: "Illustration of palm trees",
     link: "",
     image: "/portfolio/art/palm_print.jpg",
-    text: "Mykonos",
-    usesModal: true,
-  },
-
-  {
-    alt: "Illustration of woman",
-    link: "",
-    image: "/portfolio/art/blue_lady.jpg",
     text: "Mykonos",
     usesModal: true,
   },
@@ -358,7 +378,6 @@ export const illustrations = [
     text: "Mykonos",
     usesModal: true,
   },
-
   {
     alt: "Illustration of hedgehog",
     link: "",
@@ -373,11 +392,17 @@ export const illustrations = [
     text: "Mykonos",
     usesModal: true,
   },
-
   {
     alt: "Illustration of butterfly",
     link: "",
     image: "/portfolio/art/butterfly.jpg",
+    text: "Mykonos",
+    usesModal: true,
+  },
+  {
+    alt: "Illustration of hot chicken",
+    link: "",
+    image: "/portfolio/art/chicken.jpg",
     text: "Mykonos",
     usesModal: true,
   },
@@ -428,7 +453,6 @@ export const allLogos = [
   "/portfolio/logos/next.png",
   "/portfolio/logos/python.png",
   "/portfolio/logos/react.png",
-  "/portfolio/logos/remix.png",
   "/portfolio/logos/squarespace.png",
   "/portfolio/logos/figma.png",
   "/portfolio/logos/cypress.png",

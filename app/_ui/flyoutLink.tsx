@@ -33,13 +33,16 @@ const FlyoutLink: React.FC<FlyoutLinkProps> = ({
       onMouseLeave={handleMouseLeave}
       className="relative"
     >
-      <a href={href} className={`relative mr-5 ${isCurrentPage ? "text-slate-600 font-semibold ": "text-black"}`}>
+      <a
+        href={href}
+        className={`relative mr-5 ${isCurrentPage ? "font-semibold text-slate-600" : "text-slate-600"}`}
+      >
         {children}
         <span
           style={{
             transform: open ? "scaleX(1)" : "scaleX(0)",
           }}
-          className="md:absolute md:-bottom-2 md:-left-2 md:-right-2 md:mb-1 md:h-0.375 md:origin-left md:scale-x-0 md:rounded-full md:bg-slate-500 md:transition-transform md:duration-300 md:ease-out"
+          className="md:h-0.3125 md:absolute md:-bottom-2 md:-left-2 md:-right-2 md:mb-1 md:origin-left md:scale-x-0 md:rounded-full md:bg-slate-500 md:transition-transform md:duration-300 md:ease-out"
         />
       </a>
       <AnimatePresence>
@@ -50,7 +53,7 @@ const FlyoutLink: React.FC<FlyoutLinkProps> = ({
             exit={{ opacity: 0, y: 15 }}
             style={{ translateX: "-50%" }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="absolute left-0 top-11 w-full bg-white text-black md:left-1/2 md:top-8.5 md:w-auto"
+            className="absolute left-0 top-11 w-full bg-white text-slate-600 md:left-1/2 md:top-8.5 md:w-auto"
           >
             <FlyoutContent />
           </motion.div>
