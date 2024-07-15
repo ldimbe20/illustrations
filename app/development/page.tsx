@@ -1,16 +1,21 @@
-/** @format */
 "use client";
-import React from "react";
-import ImageGallery from "../_ui/imageGallery";
-import { designTypes } from "../data_exports";
+import PageLayout from "../_ui/pagelayout";
+import { allLogos, development } from "../data_exports";
 
-const items = designTypes;
+const items = development;
+const logos = allLogos;
 
-export default function Development() {
-	return (
-		<div className='container flex flex-col items-center h-full pt-10 sm:px-10rem'>
-			<h3 className='mb-4 text-xl py-10'>Development</h3>
-			<ImageGallery items={items} />
-		</div>
-	);
-}
+const Development = () => {
+  const projectHeader = "Development";
+  const description = `As an entry-level software developer, I have developed responsive websites for clients and handled end-to-end testing to ensure quality. With experience across various frameworks, I am currently focusing on Next.js and Tailwind. Below are projects I have worked on to help me develop better skills in website design.`;
+  return (
+    <PageLayout
+      projectHeader={projectHeader}
+      description={description}
+      items={items}
+      logos={logos}
+    />
+  );
+};
+
+export default Development;

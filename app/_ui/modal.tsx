@@ -3,6 +3,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 type ModalProps = {
   clickedImg: string;
@@ -43,21 +44,25 @@ const Modal: React.FC<ModalProps> = ({ clickedImg, setClickedImg }) => {
       className={`duration-700'} fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 transition-opacity ${isOpen && !isClosing ? "opacity-100" : "opacity-0"}`}
       onClick={handleOverlayClick}
     >
-      <div className="relative max-h-full max-w-full">
+      <div className="relative">
+        {/* <Image
+          src={clickedImg}
+          alt="Enlarged"
+          className="w-[400px] h-auto"
+          style={{ maxWidth: "80vw", maxHeight: "80vh" }}
+          width="400"
+          height="400"
+        /> */}
         <img
           src={clickedImg}
           alt="Enlarged"
-          className={`max-h-full max-w-full ${
-            isOpen && !isClosing
-              ? "scale-100 transform opacity-100"
-              : "scale-50 transform opacity-0"
-          }`}
+          className={`max-h-full max-w-full`}
           style={{ maxWidth: "80vw", maxHeight: "80vh" }}
         />
         {isOpen && !isClosing && (
           <button
             onClick={handleClose}
-            className="absolute right-0 top-0 m-4 text-slate-500 transition-opacity delay-700"
+            className="absolute right-2 top-1 text-slate-500 transition-opacity delay-700"
           >
             <FontAwesomeIcon icon={faXmark} size="1x" />
           </button>

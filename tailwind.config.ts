@@ -1,6 +1,5 @@
 /** @format */
 
-import { Raleway } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -30,8 +29,10 @@ const config: Config = {
 			},
 			spacing: {
 				"15": "60px",
-				"0.25": "0.0625rem", // 1/16th of a rem (1px)
+				"0.25": "0.0625rem",
 				"0.375": "0.09375rem",
+				"0.3125": "0.078125rem",
+				"8.5": "2.125rem",
 			},
 		},
 	},

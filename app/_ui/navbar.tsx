@@ -7,7 +7,7 @@ import { Portfolio } from "../data_exports";
 
 const PortfolioLinks = Portfolio;
 
-export default function Navbar() {
+const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [rotate, setRotate] = useState(false);
   const [hideRectangle, setHideRectangle] = useState(false);
@@ -24,7 +24,7 @@ export default function Navbar() {
           {/* regular menu to display on larger screens*/}
           <div className="hidden md:flex md:w-full md:items-center md:justify-between">
             <div className="md:flex md:items-center">
-              <h2 className="font-sans text-xl text-black">
+              <h2 className="font-sans text-xl text-slate-600 font-semibold">
                 Lauren Dimberg
               </h2>
             </div>
@@ -33,7 +33,7 @@ export default function Navbar() {
             </div>
           </div>
           {/* hamburger menu to display on small screens*/}
-          <div className="mr-3 flex cursor-pointer items-center text-black md:hidden">
+          <div className="mr-3 flex cursor-pointer items-center text-slate-600 md:hidden">
             <div
               className="absolute mt-7"
               onMouseEnter={toggleDropdown}
@@ -99,4 +99,6 @@ export default function Navbar() {
       </div>
     </>
   );
-}
+};
+
+export default Navbar;

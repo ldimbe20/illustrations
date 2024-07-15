@@ -11,7 +11,8 @@ export type ImageCardProps = {
   link: string;
   text: string;
   usesModal: boolean;
-  // certain galleries use the modal while others do not
+  // If the gallery is a project type -development, illustration, graphic design
+  //  - useModal is false because they use links if it displays images for a specific project it uses modals
 };
 
 const ImageCard: React.FC<ImageCardProps> = ({
@@ -30,8 +31,6 @@ const ImageCard: React.FC<ImageCardProps> = ({
     // when this event is triggered I want something to be passed to parent
   };
 
-  const changeOpacity = (item: string) => {};
-
   useEffect(() => {
     // Set the isLoaded state to true after a short delay to trigger the animation
     const timer = setTimeout(() => setIsLoaded(true), 100);
@@ -42,7 +41,7 @@ const ImageCard: React.FC<ImageCardProps> = ({
     <>
       {usesModal ? (
         <div // Render a div instead of Link when usesModal is true
-          className={`relative z-0 block cursor-pointer overflow-hidden transition-opacity duration-1000 ease-in-out ${
+          className={`relative z-0 mx-auto w-full max-w-5xl cursor-pointer overflow-hidden py-2 transition-opacity duration-1000 ease-in-out ${
             isLoaded ? "opacity-100" : "opacity-0"
           }`}
           onClick={() => handleClick(image)}
@@ -60,39 +59,37 @@ const ImageCard: React.FC<ImageCardProps> = ({
                 <div className="absolute inset-0 flex items-center justify-center"></div>
               )}
             </div>
-            <h4 className="mb-5 mt-3 text-center font-sans text-xl font-medium text-black">
-              {text}
-            </h4>
           </div>
         </div>
       ) : (
-        <Link
-          href={link}
-          className={`relative block overflow-hidden transition-opacity duration-1000 ease-in-out ${
+        <div
+          className={`relative z-0 mx-auto w-full max-w-5xl cursor-pointer overflow-hidden py-2 transition-opacity duration-1000 ease-in-out ${
             isLoaded ? "opacity-100" : "opacity-0"
           }`}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          onClick={() => handleClick(image)}
         >
-          <div className="relative">
-            <div className="group relative overflow-hidden">
-              <Image
-                src={image}
-                alt={alt}
-                width={416}
-                height={600}
-                className="transform transition-transform duration-300 ease-in-out group-hover:scale-110"
-              />
-              {isHovered && (
-                <div className="absolute inset-0 flex items-center justify-center"></div>
-              )}
+          <Link
+            href={link}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            onClick={() => handleClick(image)}
+          >
+            <div className="relative">
+              <div className="group relative overflow-hidden">
+                <Image
+                  src={image}
+                  alt={alt}
+                  width={416}
+                  height={600}
+                  className="transform transition-transform duration-300 ease-in-out group-hover:scale-110"
+                />
+                {isHovered && (
+                  <div className="absolute inset-0 flex items-center justify-center"></div>
+                )}
+              </div>
+              <h5 className="mt-2 text-center text-base font-medium text-slate-600">{text}</h5>
             </div>
-            <h4 className="mb-5 mt-3 text-center font-sans text-xl font-medium text-black">
-              {text}
-            </h4>
-          </div>
-        </Link>
+          </Link>
+        </div>
       )}
       {usesModal && clickedImg && (
         <Modal clickedImg={clickedImg} setClickedImg={setClickedImg} />

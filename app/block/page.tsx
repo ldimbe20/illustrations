@@ -1,9 +1,8 @@
 "use client";
 import PageLayout from "../_ui/pagelayout";
-import { block, blockDigital } from "../data_exports";
+import { block } from "../data_exports";
 
-const items = blockDigital;
-const itemsTwo = block;
+const items = block;
 
 const Bloc = () => {
   const projectHeader = "Block Aero Technologies";
@@ -17,7 +16,6 @@ const Bloc = () => {
       projectHeader={projectHeader}
       description={description}
       items={items}
-      itemsTwo={itemsTwo}
     />
   );
 };
