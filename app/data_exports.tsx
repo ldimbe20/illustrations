@@ -49,7 +49,7 @@ export const graphics = [
     usesModal: false,
   },
   {
-    image: "/portfolio/main/jjill-main.png",
+    image: "/portfolio/main/jjill-main.jpg",
     alt: "J.Jill",
     link: "/jjill",
     text: "J.Jill",
