@@ -90,7 +90,7 @@ const ContactForm = () => {
   };
 
   useEffect(() => {
-    const isValid = name && email && validateEmail(email) && message;
+    const isValid: boolean = name && email && validateEmail(email) && message ? true : false;
     setEnableButton(isValid);
   }, [name, email, message]);
 
