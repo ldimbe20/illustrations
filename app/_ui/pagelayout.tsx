@@ -27,7 +27,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
     <>
       <div className="container flex h-full flex-col items-center px-10 pt-10">
         <div
-          className={`h-full py-10 text-center transition-opacity duration-500 ease-in-out md:flex-col ${
+          className={`animate-moveUp h-full py-10 text-center md:flex-col ${
             loaded ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -42,7 +42,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
         {logos && logos.length > 0 ? (
           <>
             <h4
-              className={`mt-10 text-2xl font-semibold text-slate-600 transition-opacity duration-500 ease-in-out ${
+              className={`animate-moveUp mt-10 text-2xl font-semibold text-slate-600 ${
                 loaded ? "opacity-100" : "opacity-0"
               }`}
             >
@@ -50,7 +50,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
             </h4>
             <div className="mt-5 flex justify-center">
               <div
-                className={`z-0 flex flex-wrap justify-center transition-opacity duration-500 ease-in-out ${
+                className={`animate-moveUp z-0 flex flex-wrap justify-center ${
                   loaded ? "opacity-100" : "opacity-0"
                 }`}
               >

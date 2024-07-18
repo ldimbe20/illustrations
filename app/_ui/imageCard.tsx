@@ -86,7 +86,9 @@ const ImageCard: React.FC<ImageCardProps> = ({
                   <div className="absolute inset-0 flex items-center justify-center"></div>
                 )}
               </div>
-              <h5 className="mt-2 text-center text-base font-medium text-slate-600">{text}</h5>
+              <h5 className="mt-2 text-center text-base font-medium text-slate-600">
+                {text}
+              </h5>
             </div>
           </Link>
         </div>
