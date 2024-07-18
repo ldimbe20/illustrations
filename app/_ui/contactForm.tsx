@@ -16,6 +16,11 @@ const ContactForm = () => {
     message: false,
   });
   const [enableButton, setEnableButton] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
 
   const validateEmail = (email: string) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -90,12 +95,20 @@ const ContactForm = () => {
   };
 
   useEffect(() => {
-    const isValid: boolean = name && email && validateEmail(email) && message ? true : false;
+    const isValid: boolean =
+      name && email && validateEmail(email) && message ? true : false;
     setEnableButton(isValid);
   }, [name, email, message]);
 
+  // className={`h-full py-10 text-center transition-opacity duration-500 ease-in-out md:flex-col ${
+  //         loaded ? "opacity-100" : "opacity-0"
+  //       }`}
   return (
-    <div className="container mx-auto flex flex-col items-center justify-center px-5 py-10 tracking-widest">
+    <div
+      className={`container mx-auto flex flex-col items-center justify-center px-5 py-10 tracking-widest transition-opacity duration-500 ease-in-out md:flex-col ${
+        loaded ? "opacity-100" : "opacity-0"
+      } `}
+    >
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-md space-y-6 rounded-none border-2 border-slate-500 bg-slate-100 p-8"
