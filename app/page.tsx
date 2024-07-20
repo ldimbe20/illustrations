@@ -6,9 +6,9 @@ import PageLayout from "./_ui/pagelayout";
 const items = designTypes;
 
 const Home = () => {
-  const projectHeader = "Hey I’m Lauren!";
-	const description = `I am a Graphic Designer and Illustrator who dabbles in Website Development, 
-  I am more of a visual person so why not look at some of my projects. Oh I designed this site too sorry squarespace!`;
+  const projectHeader = "Hello I’m Lauren!";
+	const description = `I am a graphic designer and illustrator with an interest in website development. My goal is to use my creative talents and technical skills to design visual content that engages users. I am excited by any opportunity that involves graphic design, illustration, or web development.
+`;
   return (
     <PageLayout
       projectHeader={projectHeader}
