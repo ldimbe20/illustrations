@@ -62,6 +62,7 @@ export const graphics = [
     text: "Wildkin",
     usesModal: false,
   },
+  // May add freelance section in once I get more projects
   // {
   //   image: "/portfolio/cr/witch_book.jpg",
   //   alt: "Freelance book",
@@ -288,6 +289,13 @@ export const illustrations = [
     usesModal: true,
   },
   {
+    alt: "Nashville boot",
+    link: "",
+    image: "/portfolio/art/nashville.jpg",
+    text: "Butterfly",
+    usesModal: true,
+  },
+  {
     alt: "Illustration of cat",
     link: "",
     image: "/portfolio/art/cat.jpg",
@@ -423,6 +431,7 @@ export const development = [
     link: "https://deepweave.com/",
     image: "/portfolio/development/deepweave.jpg",
     text: "DeepWeave",
+    openNewTab: true,
     usesModal: false,
   },
   {
@@ -430,6 +439,7 @@ export const development = [
     link: "https://github.com/ldimbe20/Food-Finder",
     image: "/portfolio/development/FoodFinder.jpg",
     text: "Food Finder",
+    openNewTab: true,
     usesModal: false,
   },
   {
@@ -437,6 +447,7 @@ export const development = [
     link: "https://github.com/ldimbe20/Sketchbook-server",
     image: "/portfolio/development/Sketchbook.jpg",
     text: "Sketch Book",
+    openNewTab: true,
     usesModal: false,
   },
 ];

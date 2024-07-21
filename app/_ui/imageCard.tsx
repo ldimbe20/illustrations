@@ -10,6 +10,7 @@ export type ImageCardProps = {
   alt: string;
   link: string;
   text: string;
+  openNewTab?: boolean;
   usesModal: boolean;
   // If the gallery is a project type -development, illustration, graphic design
   //  - useModal is false because they use links if it displays images for a specific project it uses modals
@@ -20,6 +21,7 @@ const ImageCard: React.FC<ImageCardProps> = ({
   alt,
   link,
   text,
+  openNewTab,
   usesModal,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -68,6 +70,8 @@ const ImageCard: React.FC<ImageCardProps> = ({
           }`}
         >
           <Link
+            target={openNewTab ? "_blank" : undefined}
+            rel={openNewTab ? "noopener noreferrer" : undefined}
             href={link}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
