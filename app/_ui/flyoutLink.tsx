@@ -6,35 +6,23 @@ import { AnimatePresence, motion } from "framer-motion";
 
 type FlyoutLinkProps = {
   children: ReactNode;
-  href: string;
+  href?: string;
   FlyoutContent?: React.ComponentType<any>;
+  open: boolean;
 };
 
 const FlyoutLink: React.FC<FlyoutLinkProps> = ({
   children,
   href,
   FlyoutContent,
+  open,
 }) => {
-  const [open, setOpen] = useState(false);
   const router = usePathname();
   const isCurrentPage = router === href;
 
-  const handleMouseEnter = () => {
-    setOpen(true);
-  };
-
-  const handleMouseLeave = () => {
-    setOpen(false);
-  };
-
   return (
-    <div
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className="relative"
-    >
+    <div className="relative">
       <a
-        href={href}
         className={`relative mr-5 ${isCurrentPage ? "font-semibold text-slate-600" : "text-slate-600"}`}
       >
         {children}
@@ -42,7 +30,7 @@ const FlyoutLink: React.FC<FlyoutLinkProps> = ({
           style={{
             transform: open ? "scaleX(1)" : "scaleX(0)",
           }}
-          className="md:h-0.3125 md:absolute md:-bottom-2 md:-left-2 md:-right-2 md:mb-1 md:origin-left md:scale-x-0 md:rounded-full md:bg-slate-500 md:transition-transform md:duration-300 md:ease-out"
+          className="md:absolute md:-bottom-2 md:-left-2 md:-right-2 md:mb-1 md:h-0.3125 md:origin-left md:scale-x-0 md:rounded-full md:bg-slate-500 md:transition-transform md:duration-300 md:ease-out"
         />
       </a>
       <AnimatePresence>
