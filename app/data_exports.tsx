@@ -511,9 +511,7 @@ export const DropdownMenuDetails = () => {
     </div>
   );
 };
-
 // medium and up screen navigation details
-
 export const NavigationLinks = [
   {
     href: "/",
