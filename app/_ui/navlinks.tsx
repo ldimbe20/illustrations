@@ -1,14 +1,13 @@
 /** @format */
 
 import { usePathname } from "next/navigation";
+// import AnimationLinks from "./animationLinks";
 
 const NavLinks = () => {
   const router = usePathname();
 
   return (
     <div className="z-30 flex pr-5">
-      {/* get rid of these flyout links just need to be a tags with span animation */}
-      {/* grab styling from flyoutlinks maybe */}
       <a
         className={`relative mr-5 ${
           router === "/" ? "font-semibold text-slate-600" : "text-slate-600"

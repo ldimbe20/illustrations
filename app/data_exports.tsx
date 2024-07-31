@@ -1,6 +1,6 @@
 /** @format */
 
-import AnimationLinks from "./_ui/animationLinks";
+import AnimationLinks from "./_ui/dropdownMenuLink";
 
 export const designTypes = [
   {

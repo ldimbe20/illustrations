@@ -9,12 +9,11 @@ export type ImageCardProps = {
   isHeader: boolean;
 };
 
-const AnimationLinks: React.FC<ImageCardProps> = ({ text, href, isHeader }) => {
+const DropdownMenuLink: React.FC<ImageCardProps> = ({ text, href, isHeader }) => {
   const [open, setOpen] = useState(false);
 
   const handleMouseEnter = () => {
     setOpen(true);
-    console.log(open);
   };
 
   const handleMouseLeave = () => {
@@ -52,4 +51,4 @@ const AnimationLinks: React.FC<ImageCardProps> = ({ text, href, isHeader }) => {
   );
 };
 
-export default AnimationLinks;
+export default DropdownMenuLink;

@@ -2,7 +2,7 @@
 "use client";
 import NavLinks from "./navlinks";
 import { useState } from "react";
-import FlyoutLink from "./flyoutLink";
+import DropDownMenu from "./dropdownMenu";
 import { Portfolio } from "../data_exports";
 
 const PortfolioLinks = Portfolio;
@@ -33,7 +33,7 @@ const Navbar = () => {
           {/* hamburger menu to display on small screens*/}
           <div className="mr-3 flex cursor-pointer items-center text-slate-600 md:hidden">
             <div className="absolute mt-7" onClick={toggleAnimation}>
-              <FlyoutLink FlyoutContent={PortfolioLinks}>
+              <DropDownMenu DropdownContent={PortfolioLinks}>
                 <button>
                   <svg
                     viewBox="0 0 100 100"
@@ -86,7 +86,7 @@ const Navbar = () => {
                     )}
                   </svg>
                 </button>
-              </FlyoutLink>
+              </DropDownMenu>
             </div>
           </div>
         </div>
