@@ -21,24 +21,12 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
   const router = usePathname();
   const isCurrentPage = router === href;
   
-
-  // these mouse enter and leave events support the underlining in the other links
-  // const handleMouseEnter = () => {
-  //   setOpen(true);
-  // };
-
-  // const handleMouseLeave = () => {
-  //   setOpen(false);
-  // };
-
   const toggleOpen = () => {
     setOpen(!open);
   };
 
   return (
     <div
-      // onMouseEnter={handleMouseEnter}
-      // onMouseLeave={handleMouseLeave}
       onClick={toggleOpen}
       className="relative"
     >
@@ -47,12 +35,6 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
         className={`relative mr-5 ${isCurrentPage ? "font-semibold text-slate-600" : "text-slate-600"}`}
       >
         {children}
-        {/* <span
-          style={{
-            transform: open ? "scaleX(1)" : "scaleX(0)",
-          }}
-          className="md:absolute md:-bottom-2 md:-left-2 md:-right-2 md:mb-1 md:h-0.3125 md:origin-left md:scale-x-0 md:rounded-full md:bg-slate-500 md:transition-transform md:duration-300 md:ease-out"
-        /> */}
       </a>
       <AnimatePresence>
         {open && DropdownContent && (
