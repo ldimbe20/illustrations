@@ -16,6 +16,7 @@ const Navbar = () => {
     setRotate(!rotate);
     setHideRectangle(!hideRectangle);
   };
+
   return (
     <>
       <div className="z-30 h-12 w-full items-center border-b-2 border-slate-500 bg-slate-100 py-3">
@@ -23,7 +24,7 @@ const Navbar = () => {
           {/* regular menu to display on larger screens*/}
           <div className="hidden md:flex md:w-full md:items-center md:justify-between">
             <div className="md:flex md:items-center">
-              <h2 className="font-sans text-xl font-semibold text-slate-600">
+              <h2 className="font-sans text-xl text-slate-600 font-semibold">
                 Lauren Dimberg
               </h2>
             </div>
@@ -33,9 +34,13 @@ const Navbar = () => {
           </div>
           {/* hamburger menu to display on small screens*/}
           <div className="mr-3 flex cursor-pointer items-center text-slate-600 md:hidden">
-            <div className="absolute mt-7">
-              <FlyoutLink FlyoutContent={PortfolioLinks} open={isDropdownOpen}>
-                <button onClick={toggleDropdown}>
+            <div
+              className="absolute mt-7"
+              onMouseEnter={toggleDropdown}
+              onMouseLeave={toggleDropdown}
+            >
+              <FlyoutLink href="/" FlyoutContent={PortfolioLinks}>
+                <button>
                   <svg
                     viewBox="0 0 100 100"
                     className="h-9 w-9 items-center p-1"
