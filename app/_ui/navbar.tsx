@@ -3,9 +3,9 @@
 import NavLinks from "./navlinks";
 import { useState } from "react";
 import DropDownMenu from "./dropdownMenu";
-import { Portfolio } from "../data_exports";
+import { DropdownMenuDetails } from "../data_exports";
 
-const PortfolioLinks = Portfolio;
+const DropdownMenuDetailsLinks = DropdownMenuDetails;
 
 const Navbar = () => {
   const [rotate, setRotate] = useState(false);
@@ -33,8 +33,9 @@ const Navbar = () => {
           {/* hamburger menu to display on small screens*/}
           <div className="mr-3 flex cursor-pointer items-center text-slate-600 md:hidden">
             <div className="absolute mt-7" onClick={toggleAnimation}>
-              <DropDownMenu DropdownContent={PortfolioLinks}>
+              <DropDownMenu DropdownContent={DropdownMenuDetails}>
                 <button>
+                  {/* hamburger icon and X animation*/}
                   <svg
                     viewBox="0 0 100 100"
                     className="h-9 w-9 items-center p-1"

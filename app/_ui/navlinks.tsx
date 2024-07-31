@@ -1,61 +1,48 @@
 /** @format */
 
 import { usePathname } from "next/navigation";
-// import AnimationLinks from "./animationLinks";
+import { NavigationLinks } from "../data_exports";
+import { useState } from "react";
+const links = NavigationLinks;
 
 const NavLinks = () => {
   const router = usePathname();
+  const [hoveredLink, setHoveredLink] = useState(null);
+
+  const handleMouseEnter = (href:any) => {
+    setHoveredLink(href);
+    console.log("hovered");
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredLink(null);
+    console.log("hoveredtwo");
+  };
 
   return (
     <div className="z-30 flex pr-5">
-      <a
-        className={`relative mr-5 ${
-          router === "/" ? "font-semibold text-slate-600" : "text-slate-600"
-        }`}
-        href="/"
-      >
-        Home
-      </a>
-      <a
-        className={`relative mr-5 ${
-          router === "/graphics"
-            ? "font-semibold text-slate-600"
-            : "text-slate-600"
-        }`}
-        href="/graphics"
-      >
-        Graphic Design
-      </a>
-      <a
-        className={`relative mr-5 ${
-          router === "/illustration"
-            ? "font-semibold text-slate-600"
-            : "text-slate-600"
-        }`}
-        href="/illustration"
-      >
-        Illustrations
-      </a>
-      <a
-        className={`relative mr-5 ${
-          router === "/development"
-            ? "font-semibold text-slate-600"
-            : "text-slate-600"
-        }`}
-        href="/development"
-      >
-        Development
-      </a>
-      <a
-        className={`relative mr-5 ${
-          router === "/contact"
-            ? "font-semibold text-slate-600"
-            : "text-slate-600"
-        }`}
-        href="/contact"
-      >
-        Contact
-      </a>
+      {links.map((link) => (
+        <div key={link.href} className="relative mr-5">
+          <a
+            onMouseEnter={() => handleMouseEnter(link.href)}
+            onMouseLeave={handleMouseLeave}
+            className={`relative ${
+              router === link.href
+                ? "font-semibold text-slate-600"
+                : "text-slate-600"
+            }`}
+            href={link.href}
+          >
+            {link.navlinkName}
+          </a>
+          <span
+            style={{
+              transform: hoveredLink === link.href ? "scaleX(1)" : "scaleX(0)",
+            }}
+            className="absolute -bottom-2 left-0 right-0 mb-1 h-0.5 origin-left scale-x-0 rounded-full bg-slate-500 transition-transform duration-300 ease-out"
+          ></span>
+        </div>
+      ))}
     </div>
   );
 };

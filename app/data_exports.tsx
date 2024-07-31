@@ -470,9 +470,9 @@ export const allLogos = [
   "/portfolio/logos/tailwind.png",
 ];
 
-// Navigation links details
+// Dropdown Menu Links
 
-export const Portfolio = () => {
+export const DropdownMenuDetails = () => {
   return (
     <div className="w-64 bg-slate-100 text-center shadow-xl">
       <div>
@@ -511,3 +511,28 @@ export const Portfolio = () => {
     </div>
   );
 };
+
+// medium and up screen navigation details
+
+export const NavigationLinks = [
+  {
+    href: "/",
+    navlinkName: "Home",
+  },
+  {
+    href: "/graphics",
+    navlinkName: "Graphic Design",
+  },
+  {
+    href: "/illustration",
+    navlinkName: "Illustration",
+  },
+  {
+    href: "/development",
+    navlinkName: "Development",
+  },
+  {
+    href: "/contact",
+    navlinkName: "Contact",
+  },
+];

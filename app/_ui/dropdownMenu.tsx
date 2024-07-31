@@ -47,12 +47,12 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
         className={`relative mr-5 ${isCurrentPage ? "font-semibold text-slate-600" : "text-slate-600"}`}
       >
         {children}
-        <span
+        {/* <span
           style={{
             transform: open ? "scaleX(1)" : "scaleX(0)",
           }}
           className="md:absolute md:-bottom-2 md:-left-2 md:-right-2 md:mb-1 md:h-0.3125 md:origin-left md:scale-x-0 md:rounded-full md:bg-slate-500 md:transition-transform md:duration-300 md:ease-out"
-        />
+        /> */}
       </a>
       <AnimatePresence>
         {open && DropdownContent && (
