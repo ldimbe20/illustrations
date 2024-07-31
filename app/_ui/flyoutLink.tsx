@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 type FlyoutLinkProps = {
   children: ReactNode;
-  href: string;
+  href?: string;
   FlyoutContent?: React.ComponentType<any>;
 };
 
@@ -19,18 +19,25 @@ const FlyoutLink: React.FC<FlyoutLinkProps> = ({
   const router = usePathname();
   const isCurrentPage = router === href;
 
-  const handleMouseEnter = () => {
-    setOpen(true);
-  };
 
-  const handleMouseLeave = () => {
-    setOpen(false);
+  // these mouse enter and leave events support the underlining in the other links
+  // const handleMouseEnter = () => {
+  //   setOpen(true);
+  // };
+
+  // const handleMouseLeave = () => {
+  //   setOpen(false);
+  // };
+
+  const toggleOpen = () => {
+    setOpen(!open);
   };
 
   return (
     <div
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      // onMouseEnter={handleMouseEnter}
+      // onMouseLeave={handleMouseLeave}
+      onClick={toggleOpen}
       className="relative"
     >
       <a
@@ -42,7 +49,7 @@ const FlyoutLink: React.FC<FlyoutLinkProps> = ({
           style={{
             transform: open ? "scaleX(1)" : "scaleX(0)",
           }}
-          className="md:h-0.3125 md:absolute md:-bottom-2 md:-left-2 md:-right-2 md:mb-1 md:origin-left md:scale-x-0 md:rounded-full md:bg-slate-500 md:transition-transform md:duration-300 md:ease-out"
+          className="md:absolute md:-bottom-2 md:-left-2 md:-right-2 md:mb-1 md:h-0.3125 md:origin-left md:scale-x-0 md:rounded-full md:bg-slate-500 md:transition-transform md:duration-300 md:ease-out"
         />
       </a>
       <AnimatePresence>

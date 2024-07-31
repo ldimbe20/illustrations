@@ -8,11 +8,9 @@ import { Portfolio } from "../data_exports";
 const PortfolioLinks = Portfolio;
 
 const Navbar = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [rotate, setRotate] = useState(false);
   const [hideRectangle, setHideRectangle] = useState(false);
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+  const toggleAnimation = () => {
     setRotate(!rotate);
     setHideRectangle(!hideRectangle);
   };
@@ -24,7 +22,7 @@ const Navbar = () => {
           {/* regular menu to display on larger screens*/}
           <div className="hidden md:flex md:w-full md:items-center md:justify-between">
             <div className="md:flex md:items-center">
-              <h2 className="font-sans text-xl text-slate-600 font-semibold">
+              <h2 className="font-sans text-xl font-semibold text-slate-600">
                 Lauren Dimberg
               </h2>
             </div>
@@ -34,12 +32,8 @@ const Navbar = () => {
           </div>
           {/* hamburger menu to display on small screens*/}
           <div className="mr-3 flex cursor-pointer items-center text-slate-600 md:hidden">
-            <div
-              className="absolute mt-7"
-              onMouseEnter={toggleDropdown}
-              onMouseLeave={toggleDropdown}
-            >
-              <FlyoutLink href="/" FlyoutContent={PortfolioLinks}>
+            <div className="absolute mt-7" onClick={toggleAnimation}>
+              <FlyoutLink FlyoutContent={PortfolioLinks}>
                 <button>
                   <svg
                     viewBox="0 0 100 100"
