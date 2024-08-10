@@ -20,6 +20,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items }) => {
             usesModal={item.usesModal}
             isVideo={item.isVideo}
             video={item.video}
+            isMotionGraphic={item.isMotionGraphic}
           />
         ))}
       </div>

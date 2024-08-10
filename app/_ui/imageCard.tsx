@@ -13,8 +13,9 @@ export type ImageCardProps = {
   text: string;
   openNewTab?: boolean;
   usesModal: boolean;
-  isVideo: boolean;
-  video: string;
+  isVideo?: boolean;
+  video?: string;
+  isMotionGraphic?: boolean;
   // If the gallery is a project type -development, illustration, graphic design
   //  - useModal is false because they use links if it displays images for a specific project it uses modals
 };
@@ -27,10 +28,12 @@ const ImageCard: React.FC<ImageCardProps> = ({
   openNewTab,
   usesModal,
   isVideo,
-  video
+  video,
+  isMotionGraphic,
 }) => {
   const [clickedImg, setClickedImg] = useState("");
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleClick = (item: string) => {
     setClickedImg(item);
@@ -51,18 +54,29 @@ const ImageCard: React.FC<ImageCardProps> = ({
             isLoaded ? "opacity-100" : "opacity-0"
           }`}
           onClick={() => {
-            isVideo && video ? handleClick(video) : handleClick(image)
+            isVideo && video ? handleClick(video) : handleClick(image);
           }}
         >
           <div className="relative">
-            <div className="group relative overflow-hidden">
+            <div
+              className="group relative overflow-hidden"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
               <Image
                 src={image}
                 alt={alt}
                 width={416}
                 height={600}
-                className="transform transition-transform duration-300 ease-in-out group-hover:scale-110"
+                className="z-10 transform transition-transform duration-300 ease-in-out group-hover:scale-110"
               />
+              {isMotionGraphic && isHovered && (
+                <div className="absolute inset-x-0 bottom-0 z-20 h-10 bg-white bg-opacity-70 text-lg font-semibold text-slate-900 uppercase">
+                  <div className="flex h-full items-center justify-center">
+                    Motion Graphic
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
