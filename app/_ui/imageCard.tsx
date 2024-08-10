@@ -29,7 +29,6 @@ const ImageCard: React.FC<ImageCardProps> = ({
   isVideo,
   video
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
   const [clickedImg, setClickedImg] = useState("");
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -64,9 +63,6 @@ const ImageCard: React.FC<ImageCardProps> = ({
                 height={600}
                 className="transform transition-transform duration-300 ease-in-out group-hover:scale-110"
               />
-              {isHovered && (
-                <div className="absolute inset-0 flex items-center justify-center"></div>
-              )}
             </div>
           </div>
         </div>
@@ -80,8 +76,6 @@ const ImageCard: React.FC<ImageCardProps> = ({
             target={openNewTab ? "_blank" : undefined}
             rel={openNewTab ? "noopener noreferrer" : undefined}
             href={link}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
             onClick={() => handleClick(image)}
           >
             <div className="relative">
@@ -93,9 +87,6 @@ const ImageCard: React.FC<ImageCardProps> = ({
                   height={600}
                   className="transform transition-transform duration-300 ease-in-out group-hover:scale-110"
                 />
-                {isHovered && (
-                  <div className="absolute inset-0 flex items-center justify-center"></div>
-                )}
               </div>
               <h5 className="mt-2 text-center text-base font-medium text-slate-600">
                 {text}

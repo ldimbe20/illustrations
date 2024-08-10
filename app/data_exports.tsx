@@ -118,6 +118,7 @@ export const block = [
     usesModal: true,
     isVideo: "true",
     video: "/portfolio/block/animation.mp4",
+    motionGraphic:true,
   },
 ];
 
