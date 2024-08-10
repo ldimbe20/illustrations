@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Modal from "./modal";
+import VideoModal from "./videoModal";
 
 export type ImageCardProps = {
   image: string;
@@ -12,6 +13,8 @@ export type ImageCardProps = {
   text: string;
   openNewTab?: boolean;
   usesModal: boolean;
+  isVideo: boolean;
+  video: string;
   // If the gallery is a project type -development, illustration, graphic design
   //  - useModal is false because they use links if it displays images for a specific project it uses modals
 };
@@ -23,6 +26,8 @@ const ImageCard: React.FC<ImageCardProps> = ({
   text,
   openNewTab,
   usesModal,
+  isVideo,
+  video
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [clickedImg, setClickedImg] = useState("");
@@ -46,7 +51,9 @@ const ImageCard: React.FC<ImageCardProps> = ({
           className={`relative z-0 mx-auto w-full max-w-5xl cursor-pointer overflow-hidden py-2 transition-opacity duration-1000 ease-in-out ${
             isLoaded ? "opacity-100" : "opacity-0"
           }`}
-          onClick={() => handleClick(image)}
+          onClick={() => {
+            isVideo && video ? handleClick(video) : handleClick(image)
+          }}
         >
           <div className="relative">
             <div className="group relative overflow-hidden">
@@ -97,9 +104,13 @@ const ImageCard: React.FC<ImageCardProps> = ({
           </Link>
         </div>
       )}
-      {usesModal && clickedImg && (
-        <Modal clickedImg={clickedImg} setClickedImg={setClickedImg} />
-      )}
+      {usesModal &&
+        clickedImg &&
+        (isVideo ? (
+          <VideoModal clickedImg={clickedImg} setClickedImg={setClickedImg} />
+        ) : (
+          <Modal clickedImg={clickedImg} setClickedImg={setClickedImg} />
+        ))}
     </>
   );
 };
