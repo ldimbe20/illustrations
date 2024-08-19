@@ -110,6 +110,16 @@ export const block = [
     text: "LinkedIn post",
     usesModal: true,
   },
+  {
+    image: "/portfolio/block/animation_image.jpg",
+    alt: "Animations for block aero",
+    link: "/block",
+    text: "Animation",
+    usesModal: true,
+    isVideo: "true",
+    video: "/portfolio/block/animation.mp4",
+    isMotionGraphic:true,
+  },
 ];
 
 export const gibson = [

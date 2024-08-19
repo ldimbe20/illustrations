@@ -12,11 +12,13 @@ const Bloc = () => {
 						flyers, along with Instagram and LinkedIn posts, that I created for
 						the company.`;
   return (
-    <PageLayout
-      projectHeader={projectHeader}
-      description={description}
-      items={items}
-    />
+    <>
+      <PageLayout
+        projectHeader={projectHeader}
+        description={description}
+        items={items}
+      />
+    </>
   );
 };
 

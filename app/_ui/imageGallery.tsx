@@ -16,8 +16,11 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items }) => {
             alt={item.alt}
             link={item.link}
             text={item.text}
-            openNewTab = {item.openNewTab}
+            openNewTab={item.openNewTab}
             usesModal={item.usesModal}
+            isVideo={item.isVideo}
+            video={item.video}
+            isMotionGraphic={item.isMotionGraphic}
           />
         ))}
       </div>
